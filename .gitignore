@@ -1,0 +1,9 @@
+.settings*
+.idea/*
+.project
+.credentials*
+gfx/*
+PublicHtml/*
+node_modules*
+.tmp*
+intern_*
