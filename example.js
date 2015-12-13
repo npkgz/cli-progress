@@ -63,7 +63,7 @@ function Example2(onComplete){
         value++;
 
         // update the bar value
-        b2.update(value)
+        b2.update(value);
 
         // set limit
         if (value >= b2.getTotal()){

@@ -7,8 +7,8 @@ Easy to use Progress-Bar for Command-Line/Terminal Applications
 Features
 --------
 
-* Simple, Robust and easily to use
-* Full customizable output format (various placeholders are available=
+* **Simple**, **Robust** and **Easy** to use
+* Full customizable output format (various placeholders are available)
 * Custom Bar Characters
 * FPS limiter
 * ETA calculation based on elapsed time
@@ -20,7 +20,7 @@ Features
 Installation
 ------------
 
-You can install cli-progress with [NPM](http://npmjs.com)
+You can install cli-progress with [NPM](http://www.npmjs.com/package/cli-progress)
 
 ```bash
 $ npm install cli-progress
@@ -34,6 +34,10 @@ $ wget https://github.com/AndiDittrich/Node.CLI-Progress/archive/v1.0.0.tar.gz
 
 Progress-Bar
 ------------
+
+### Getting Started ###
+
+You can find some basic examples in [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/example.js) - just run the file with `$ node example.js` 
 
 ### Usage ###
 
@@ -92,12 +96,12 @@ Stops the progress bar and go to next line
 
 The progressbar can be customized by using the following build-in placeholders. They can be combined in any order.
 
-- **{bar}** - the progress bar, customizable by the options **barsize**, **barCompleteString** and **barIncompleteString**
-- **{percentage}** - the current progress in percent (0-100)
-- **{total}** - the end value
-- **{value}** - the current value set by last `update()` call
-- **{eta}** - expected time of accomplishment in seconds
-- **{duration}** - elapsed time in seconds
+- `{bar}` - the progress bar, customizable by the options **barsize**, **barCompleteString** and **barIncompleteString**
+- `{percentage}` - the current progress in percent (0-100)
+- `{total}` - the end value
+- `{value}` - the current value set by last `update()` call
+- `{eta}` - expected time of accomplishment in seconds
+- `{duration}` - elapsed time in seconds
 
 #### Example ####
 
@@ -113,13 +117,13 @@ progess [========================================] 100% | ETA: 0s | 200/200
 
 ### Options ###
 
-- **format** (type:string) - progress bar output format @see format section
-- **fps** (type:int) - the maximum update rate
-- **stream** (type:stream) - output stream to use (default: `process.stderr`)
-- **clearOnComplete** (type:boolean) - clear the progress bar on complete - `stop()` called (default: false)
-- **barsize** (type:int) - the length of the progress bar in chars (default: 40)
-- **barCompleteString** (type:char) - character to use as "complete" indicator in the bar (default: "=")
-- **barIncompleteString** (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
+- `format` (type:string) - progress bar output format @see format section
+- `fps` (type:int) - the maximum update rate
+- `stream` (type:stream) - output stream to use (default: `process.stderr`)
+- `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
+- `barsize` (type:int) - the length of the progress bar in chars (default: 40)
+- `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
+- `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 
 #### Example ####
 
