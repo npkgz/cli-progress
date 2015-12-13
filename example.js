@@ -1,5 +1,4 @@
 var _progress = require('./main');
-var color = require('colors');
 
 // run the example sequentially! otherwise both will write to stdout/stderr simultaneous !
 Example1(function(){
@@ -48,7 +47,7 @@ function Example2(onComplete){
     var b2 = new _progress.Bar({
         barCompleteChar: '#',
         barIncompleteChar: '.',
-        format: color.yellow(' |- Current Upload Progress: {percentage}%') + ' - ' + color.grey('||{bar}||'),
+        format: ' |- Current Upload Progress: {percentage}%' + ' - ' + '||{bar}||',
         fps: 5,
         stream: process.stdout,
         barsize: 65
