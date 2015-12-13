@@ -35,22 +35,22 @@ function Example1(onComplete){
             // run complete callback
             onComplete.apply(this);
         }
-    }, 20);
+    }, 10);
 }
 
 
 function Example2(onComplete){
     // EXAMPLE 2 ---------------------------------------------
-    console.log('\nExample 2 - Custom configuration & colorized');
+    console.log('\nExample 2 - Custom configuration');
 
     // create new progress bar using default values
     var b2 = new _progress.Bar({
         barCompleteChar: '#',
-        barIncompleteChar: '.',
+        barIncompleteChar: '_',
         format: ' |- Current Upload Progress: {percentage}%' + ' - ' + '||{bar}||',
         fps: 5,
         stream: process.stdout,
-        barsize: 65
+        barsize: 30
     });
     b2.start(100, 0);
 
