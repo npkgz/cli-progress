@@ -2,6 +2,8 @@ CLI-Progress
 ============
 Easy to use Progress-Bar for Command-Line/Terminal Applications
 
+![Demo](https://github.com/AndiDittrich/Node.CLI-Progress/raw/master/video.gif)
+
 Features
 --------
 
