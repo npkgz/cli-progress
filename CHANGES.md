@@ -1,3 +1,6 @@
+### 1.1.1 ###
+Bugfix: Hide cursor options was enabled by default
+
 ### 1.1.0 ###
 Added: Support for synchronous operations (interval has been replaced by timeout and throttle time) - feature requested [GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/1)
 Added: Synchronous Operation Example `example-synchronous.js`
