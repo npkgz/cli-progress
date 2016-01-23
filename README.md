@@ -2,6 +2,10 @@ CLI-Progress
 ============
 Easy to use Progress-Bar for Command-Line/Terminal Applications
 
+```bash
+$ npm install cli-progress
+```
+
 ![Demo](https://github.com/AndiDittrich/Node.CLI-Progress/raw/master/video.gif)
 
 Features
@@ -14,6 +18,7 @@ Features
 * ETA calculation based on elapsed time
 * Only visible in TTY environments
 * No callbacks required - designed as pure, external controlled UI widget
+* Works in Asynchronous and Synchronous tasks
 
 *Successful tested on Windows10, Debian 8.2 and Ubuntu 14 LTS*
 
@@ -29,7 +34,7 @@ $ npm install cli-progress
 Or manually from the [GitHub Repository](https://github.com/AndiDittrich/Node.CLI-Progress/releases/latest)
 
 ```bash
-$ wget https://github.com/AndiDittrich/Node.CLI-Progress/archive/v1.0.0.tar.gz
+$ wget https://github.com/AndiDittrich/Node.CLI-Progress/archive/v1.1.0.tar.gz
 ```
 
 Progress-Bar
@@ -124,6 +129,7 @@ progess [========================================] 100% | ETA: 0s | 200/200
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
 - `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
+- `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false)
 
 #### Example ####
 

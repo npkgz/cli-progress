@@ -1,3 +1,9 @@
+### 1.1.0 ###
+Added: Support for synchronous operations (interval has been replaced by timeout and throttle time) - feature requested [GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/1)
+Added: Synchronous Operation Example `example-synchronous.js`
+Added: Option to hide the cursor `options.hideCursor` - default set to false
+Changed: Improved ETA calculation
+
 ### 1.0.1 ###
 Bugfix: the bar-size is limited to `options.barsize` - in some (numerical) situations it can be too long (n+1)
 

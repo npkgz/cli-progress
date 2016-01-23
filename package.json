@@ -1,6 +1,6 @@
 {
   "name": "cli-progress",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Easy to use Progress-Bar for Command-Line/Terminal Applications",
   "keywords": [
     "cli",
@@ -19,7 +19,8 @@
   "repository": "AndiDittrich/Node.CLI-Progress",
   "files": [
     "main.js",
-    "examples.js",
+    "example.js",
+    "example-synchronous.js",
     "lib"
   ],
   "main": "./main.js",

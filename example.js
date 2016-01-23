@@ -9,7 +9,7 @@ Example1(function(){
 
 function Example1(onComplete){
     // EXAMPLE 1 ---------------------------------------------
-    console.log('\nExample 1 - Standard configuration');
+    console.log('\nExample 1 - Standard configuration (4s)');
     // create new progress bar using default values
     var b1 = new _progress.Bar();
     b1.start(200, 0);
@@ -35,7 +35,7 @@ function Example1(onComplete){
             // run complete callback
             onComplete.apply(this);
         }
-    }, 10);
+    }, 20);
 }
 
 
