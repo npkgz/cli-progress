@@ -1,3 +1,6 @@
+### 1.1.2 ###
+Bugfix: stdout.cursorTo/stdout.clearLine is not a function; replaced by `readline` - thanks to [remcoder on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/2)
+
 ### 1.1.1 ###
 Bugfix: Hide cursor options was enabled by default
 
