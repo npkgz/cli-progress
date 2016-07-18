@@ -88,6 +88,14 @@ Sets the current progress value
 <instance>.update(currentValue:int);
 ```
 
+#### increment() ####
+
+Increases the current progress value by a specified amount (default +1)
+
+```js
+<instance>.increment(delta:int);
+```
+
 #### stop() ####
 
 Stops the progress bar and go to next line
