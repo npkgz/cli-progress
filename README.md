@@ -123,7 +123,7 @@ progress [========================================] 100% | ETA: 0s | 200/200
 ### Options ###
 
 - `format` (type:string) - progress bar output format @see format section
-- `fps` (type:int) - the maximum update rate
+- `fps` (type:float) - the maximum update rate (default: 10)
 - `stream` (type:stream) - output stream to use (default: `process.stderr`)
 - `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
