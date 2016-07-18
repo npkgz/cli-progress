@@ -115,6 +115,8 @@ The progressbar can be customized by using the following build-in placeholders. 
 - `{value}` - the current value set by last `update()` call
 - `{eta}` - expected time of accomplishment in seconds
 - `{duration}` - elapsed time in seconds
+- `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
+- `{duration_formatted}` - elapsed time formatted into appropriate units
 
 #### Example ####
 
