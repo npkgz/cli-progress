@@ -54,19 +54,13 @@ function Example2(onComplete){
     });
     b2.start(100, 0);
 
-    // the bar value - will be linear incremented
-    var value = 0;
-
     // 50ms update rate
     var timer = setInterval(function(){
         // increment value
-        value++;
-
-        // update the bar value
-        b2.update(value);
+        b2.increment();
 
         // set limit
-        if (value >= b2.getTotal()){
+        if (b2.value >= b2.getTotal()){
             // stop timer
             clearInterval(timer);
 
