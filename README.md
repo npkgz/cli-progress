@@ -111,13 +111,13 @@ The progressbar can be customized by using the following build-in placeholders. 
 #### Example ####
 
 ```
-progess [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}
+progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}
 ```
 
 is rendered as
 
 ```
-progess [========================================] 100% | ETA: 0s | 200/200
+progress [========================================] 100% | ETA: 0s | 200/200
 ```
 
 ### Options ###
