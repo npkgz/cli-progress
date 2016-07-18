@@ -140,6 +140,7 @@ progress [========================================] 100% | ETA: 0s | 200/200
 - `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false)
+- `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 
 #### Example ####
 
