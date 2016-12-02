@@ -3,7 +3,9 @@ var _progress = require('./main');
 // run the example sequentially! otherwise both will write to stdout/stderr simultaneous !
 Example1(function(){
     Example2(function(){
-        console.log('\nDemo finished!');
+        Example3(function(){
+            console.log('\nDemo finished!');
+        });
     });
 });
 
@@ -70,4 +72,36 @@ function Example2(onComplete){
             onComplete.apply(this);
         }
     }, 50);
-};
+}
+
+function Example3(onComplete){
+    // EXAMPLE 3 ---------------------------------------------
+    console.log('\nExample 3 - Stop the Bar Automatically');
+    // create new progress bar using default values
+    var b3 = new _progress.Bar({
+        stopOnComplete: true,
+        clearOnComplete: true
+    });
+    b3.start(200, 0);
+
+    // the bar value - will be linear incremented
+    var value = 0;
+
+    // 20ms update rate
+    var timer = setInterval(function(){
+        // increment value
+        value++;
+
+        // update the bar value
+        b3.update(value);
+
+        // set limit
+        if (value >= b3.getTotal()){
+            // stop timer
+            clearInterval(timer);
+
+            // run complete callback
+            onComplete.apply(this);
+        }
+    }, 20);
+}

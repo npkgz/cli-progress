@@ -1,3 +1,6 @@
+### 1.3.0 ###
+* Added: `stopOnComplete` option to automatically call `stop()` when the value reaches the total - thanks to [lennym on GitHub](https://github.com/lennym) #7
+
 ### 1.2.0 ###
 * Added: `increment()` method to increase the current progress relatively - thanks to [lennym on GitHub](https://github.com/lennym) #6
 * Added: ETA time formatting options (mm:ss, hh:mm, ss) - thanks to [lennym on GitHub](https://github.com/lennym) #5
