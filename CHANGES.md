@@ -1,3 +1,6 @@
+### 1.3.1 ###
+* Bugfix: `update()` throws an error in **non-tty** environments - reported by [Ognian on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/9) #9
+
 ### 1.3.0 ###
 * Added: `stopOnComplete` option to automatically call `stop()` when the value reaches the total - thanks to [lennym on GitHub](https://github.com/lennym) #7
 
