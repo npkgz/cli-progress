@@ -6,7 +6,11 @@ Easy to use Progress-Bar for Command-Line/Terminal Applications
 $ npm install cli-progress
 ```
 
-![Demo](https://github.com/AndiDittrich/Node.CLI-Progress/raw/master/video.gif)
+![Demo](assets/video.gif)
+
+Presets
+-------
+![Demo](assets/presets.png)
 
 Features
 --------
@@ -19,8 +23,9 @@ Features
 * Only visible in TTY environments
 * No callbacks required - designed as pure, external controlled UI widget
 * Works in Asynchronous and Synchronous tasks
+* Preset/Theme support
 
-*Successful tested on Windows10, Debian 8.2 and Ubuntu 14 LTS*
+*Successful tested on Windows10, Debian 8 and Ubuntu 14,15,16*
 
 Installation
 ------------
@@ -29,12 +34,13 @@ You can install cli-progress with [NPM](http://www.npmjs.com/package/cli-progres
 
 ```bash
 $ npm install cli-progress
+$ yarn add cli-progress
 ```
 
 Or manually from the [GitHub Repository](https://github.com/AndiDittrich/Node.CLI-Progress/releases/latest)
 
 ```bash
-$ wget https://github.com/AndiDittrich/Node.CLI-Progress/archive/v1.1.0.tar.gz
+$ wget https://github.com/AndiDittrich/Node.CLI-Progress/archive/v1.4.0.tar.gz
 ```
 
 Progress-Bar
@@ -69,7 +75,7 @@ bar1.stop();
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
 ```js
-var <instance> = new namespace.Bar(options:object);
+var <instance> = new namespace.Bar(options:object, preset:string);
 ```
 
 #### start() ####
@@ -157,6 +163,22 @@ var b2 = new _progress.Bar({
     barsize: 65
 });
 ```
+
+Presets/Themes
+---------------------------------------------
+
+Need a more modern appearance ? **cli-progress** supports predefined themes via presets. You are welcome to add your custom one :)
+
+But keep in mind that a lot of the "special-chars" rely on Unicode - it might not work as expected on legacy systems.
+
+### Default Presets ###
+
+The following presets are included by default
+
+* **legacy** - Styles as of cli-progress v1.3.0
+* **shades-classic** - Unicode background shades are used for the bar
+* **shades-grey** - Unicode background shades with grey bar
+* **rect** - Unicode Rectangles
 
 Any Questions ? Report a Bug ? Enhancements ?
 ---------------------------------------------

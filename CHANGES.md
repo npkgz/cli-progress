@@ -1,4 +1,13 @@
+### 1.4.0 ###
+* Added: **Preset/Theme support**. Different bar-styles can be loaded from internal library (in addition to full customization)
+* Added: Dependency **colors** for colorized progress bars 
+* Added: Preset `legacy`
+* Added: Preset `shades-classic`
+* Added: Preset `shades-grey`
+* Added: Preset `rect`
+
 ### 1.3.1 ###
+* Added: `example-notty` to test the behaviour of progress bar in non-interactive environments (input streams closed)
 * Bugfix: `update()` throws an error in **non-tty** environments - reported by [Ognian on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/9) #9
 
 ### 1.3.0 ###
