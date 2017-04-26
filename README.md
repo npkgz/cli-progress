@@ -55,8 +55,8 @@ You can find some basic examples in [example.js](https://github.com/AndiDittrich
 ```js
 var _progress = require('cli-progress');
 
-// create a new progress bar instance
-var bar1 = new _progress.Bar();
+// create a new progress bar instance and use shades_classic theme
+var bar1 = new _progress.Bar({}, _progress.Presets.shades_classic);
 
 // start the progress bar with a total value of 200 and start value of 0
 bar1.start(200, 0);
@@ -75,7 +75,7 @@ bar1.stop();
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
 ```js
-var <instance> = new namespace.Bar(options:object, preset:string);
+var <instance> = new namespace.Bar(options:object, preset:object);
 ```
 
 #### start() ####
