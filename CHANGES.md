@@ -1,3 +1,6 @@
+### 1.5.0 ###
+* Added: **0** values for total/progress initialization are allowed - feature requested by [jfmmm on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/11) #11
+
 ### 1.4.0 ###
 * Added: **Preset/Theme support**. Different bar-styles can be loaded from internal library (in addition to full customization)
 * Added: Dependency **colors** for colorized progress bars 

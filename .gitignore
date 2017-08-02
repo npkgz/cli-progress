@@ -7,3 +7,4 @@ PublicHtml/*
 node_modules*
 .tmp*
 intern_*
+dev.js
