@@ -1,3 +1,6 @@
+### 1.5.1 ###
+* Bugifx: Progressbar cannot be initialized to 0% - thanks to [erikkallen on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/14) #13
+
 ### 1.5.0 ###
 * Added: **0** values for total/progress initialization are allowed - feature requested by [jfmmm on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/11) #11
 
