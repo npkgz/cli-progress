@@ -4,7 +4,9 @@ var _progress = require('./main');
 Example1(function(){
     Example2(function(){
         Example3(function(){
-            console.log('\nDemo finished!');
+            Example4(function(){
+                console.log('\nDemo finished!');
+            });
         });
     });
 });
@@ -104,4 +106,19 @@ function Example3(onComplete){
             onComplete.apply(this);
         }
     }, 20);
+}
+
+function Example4(onComplete){
+    // EXAMPLE 1 ---------------------------------------------
+    console.log('\nExample 4 - Start ZERO');
+    // create new progress bar using default values
+    var b1 = new _progress.Bar();
+    b1.start(0, 0);
+
+    setTimeout(function(){
+        b1.stop();
+
+        // run complete callback
+        onComplete.apply(this);
+    }, 1000); 
 }
