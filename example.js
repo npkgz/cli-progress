@@ -15,11 +15,19 @@ function Example1(onComplete){
     // EXAMPLE 1 ---------------------------------------------
     console.log('\nExample 1 - Standard configuration (4s)');
     // create new progress bar using default values
-    var b1 = new _progress.Bar();
+    var b1 = new _progress.Bar({
+        format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed}',
+        custom: {
+            speed: "N/A"
+        }
+    });
+
     b1.start(200, 0);
 
     // the bar value - will be linear incremented
     var value = 0;
+
+    var speedData = [];
 
     // 20ms update rate
     var timer = setInterval(function(){
@@ -27,7 +35,11 @@ function Example1(onComplete){
         value++;
 
         // update the bar value
-        b1.update(value)
+        speedData.push(Math.random()*2+5);
+        var currentSpeedData = speedData.splice(-10);
+        b1.update(value, {
+            speed: (currentSpeedData.reduce(function(a, b) { return a + b; }, 0) / currentSpeedData.length).toFixed(2) + "mb/s"
+        });
 
         // set limit
         if (value >= b1.getTotal()){
