@@ -88,10 +88,10 @@ Starts the progress bar and set the total and initial value
 
 #### update() ####
 
-Sets the current progress value and optionally the values of custom keys as a second parameter
+Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
 
 ```js
-<instance>.update(currentValue:int, customValues:object = undefined);
+<instance>.update(currentValue:int, payload:object = undefined);
 ```
 
 #### increment() ####
@@ -148,7 +148,7 @@ progress [========================================] 100% | ETA: 0s | 200/200
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
-- `custom` (type:object) - Custom keys and default values for use in `format`
+- `payload` (type:object) - Custom tokens with default values for use in `format`
 
 #### Example ####
 
