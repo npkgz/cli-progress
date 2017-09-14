@@ -5,7 +5,9 @@ Example1(function(){
     Example2(function(){
         Example3(function(){
             Example4(function(){
-                console.log('\nDemo finished!');
+                Example5(function(){
+                    console.log('\nDemo finished!');
+                });
             });
         });
     });
@@ -121,4 +123,49 @@ function Example4(onComplete){
         // run complete callback
         onComplete.apply(this);
     }, 1000); 
+}
+
+function Example5(onComplete){
+    // EXAMPLE 1 ---------------------------------------------
+    console.log('\nExample 5 - Payload');
+    // create new progress bar and defining payload token "speed" with the default value "N/A"
+    var b1 = new _progress.Bar({
+        format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed}',
+        payload: {
+            speed: "N/A"
+        }
+    });
+
+    b1.start(200, 0);
+
+    // the bar value - will be linear incremented
+    var value = 0;
+
+    var speedData = [];
+
+    // 20ms update rate
+    var timer = setInterval(function(){
+        // increment value
+        value++;
+
+        // example speed data
+        speedData.push(Math.random()*2+5);
+        var currentSpeedData = speedData.splice(-10);
+
+        // update the bar value
+        b1.update(value, {
+            speed: (currentSpeedData.reduce(function(a, b) { return a + b; }, 0) / currentSpeedData.length).toFixed(2) + "mb/s"
+        });
+
+        // set limit
+        if (value >= b1.getTotal()){
+            // stop timer
+            clearInterval(timer);
+
+            b1.stop();
+
+            // run complete callback
+            onComplete.apply(this);
+        }
+    }, 20);
 }
