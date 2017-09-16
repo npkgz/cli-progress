@@ -20,6 +20,7 @@ Features
 * Custom Bar Characters
 * FPS limiter
 * ETA calculation based on elapsed time
+* Custom Tokens to display additional data (payload) within the bar
 * Only visible in TTY environments
 * No callbacks required - designed as pure, external controlled UI widget
 * Works in Asynchronous and Synchronous tasks
@@ -83,7 +84,7 @@ var <instance> = new namespace.Bar(options:object, preset:object);
 Starts the progress bar and set the total and initial value
 
 ```js
-<instance>.start(totalValue:int, startValue:int);
+<instance>.start(totalValue:int, startValue:int [, payload:object = {}]);
 ```
 
 #### update() ####
@@ -91,7 +92,7 @@ Starts the progress bar and set the total and initial value
 Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
 
 ```js
-<instance>.update(currentValue:int, payload:object = undefined);
+<instance>.update(currentValue:int [, payload:object = {}]);
 ```
 
 #### increment() ####
@@ -148,15 +149,19 @@ progress [========================================] 100% | ETA: 0s | 200/200
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
-- `payload` (type:object) - Custom tokens with default values for use in `format`
 
-#### Example ####
+
+
+Examples
+---------------------------------------------
+
+#### Example 1 - Set Options ####
 
 ```js
 // change the progress characters
 // set fps limit to 5
 // change the output stream and barsize
-var b2 = new _progress.Bar({
+var bar = new _progress.Bar({
     barCompleteChar: '#',
     barIncompleteChar: '.',
     fps: 5,
@@ -164,6 +169,66 @@ var b2 = new _progress.Bar({
     barsize: 65
 });
 ```
+
+#### Example 2 - Change Styles defined by Preset ####
+
+```js
+// uee shades preset
+// change the barsize
+var bar = new _progress.Bar({
+    barsize: 65
+}, _progress.Presets.shades_grey);
+```
+
+### Example 3 - Custom Payload ###
+
+```js
+// create new progress bar with custom token "speed"
+var bar = new _progress.Bar({
+    format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit'
+});
+
+// initialize the bar - set payload token "speed" with the default value "N/A"
+bar.start(200, 0, {
+    speed: "N/A"
+});
+
+// some code/update loop
+// ...
+
+// update bar value. set custom token "speed" to 125
+bar.update(5, {
+    speed: '125'
+});
+
+// process finished
+bar.stop();
+```
+
+### Example 4 - Custom Presets ###
+
+**File** `mypreset.js`
+
+```js
+var _colors = require('colors');
+
+module.exports = {
+    format: _colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591'
+};
+```
+
+**Application**
+
+```js
+var _mypreset = require('./mypreset.js');
+
+var bar = new _progress.Bar({
+    barsize: 65
+}, _mypreset);
+```
+
 
 Presets/Themes
 ---------------------------------------------

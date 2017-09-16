@@ -126,17 +126,17 @@ function Example4(onComplete){
 }
 
 function Example5(onComplete){
-    // EXAMPLE 1 ---------------------------------------------
-    console.log('\nExample 5 - Payload');
-    // create new progress bar and defining payload token "speed" with the default value "N/A"
+    // EXAMPLE 5 ---------------------------------------------
+    console.log('\nExample 5 - Custom Payload');
+    // create new progress bar
     var b1 = new _progress.Bar({
-        format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed}',
-        payload: {
-            speed: "N/A"
-        }
+        format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed}'
     });
 
-    b1.start(200, 0);
+    // initialize the bar -  defining payload token "speed" with the default value "N/A"
+    b1.start(200, 0, {
+        speed: "N/A"
+    });
 
     // the bar value - will be linear incremented
     var value = 0;
