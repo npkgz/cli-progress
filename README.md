@@ -31,17 +31,11 @@ Features
 Installation
 ------------
 
-You can install cli-progress with [NPM](http://www.npmjs.com/package/cli-progress)
+You can install **cli-progress** with [NPM](http://www.npmjs.com/package/cli-progress) or [yarn](https://yarnpkg.com)
 
 ```bash
 $ npm install cli-progress
 $ yarn add cli-progress
-```
-
-Or manually from the [GitHub Repository](https://github.com/AndiDittrich/Node.CLI-Progress/releases/latest)
-
-```bash
-$ wget https://github.com/AndiDittrich/Node.CLI-Progress/archive/v1.4.0.tar.gz
 ```
 
 Progress-Bar
