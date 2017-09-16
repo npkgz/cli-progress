@@ -3,7 +3,8 @@ CLI-Progress
 Easy to use Progress-Bar for Command-Line/Terminal Applications
 
 ```bash
-$ npm install cli-progress
+$ npm install cli-progress --save
+$ yarn add cli-progress --save
 ```
 
 ![Demo](assets/video.gif)
@@ -27,16 +28,6 @@ Features
 * Preset/Theme support
 
 *Successful tested on Windows10, Debian 8 and Ubuntu 14,15,16*
-
-Installation
-------------
-
-You can install **cli-progress** with [NPM](http://www.npmjs.com/package/cli-progress) or [yarn](https://yarnpkg.com)
-
-```bash
-$ npm install cli-progress
-$ yarn add cli-progress
-```
 
 Progress-Bar
 ------------
