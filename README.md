@@ -2,12 +2,15 @@ CLI-Progress
 ============
 Easy to use Progress-Bar for Command-Line/Terminal Applications
 
+![Demo](assets/cli-progress.gif)
+
+Install
+--------
+
 ```bash
 $ npm install cli-progress --save
 $ yarn add cli-progress --save
 ```
-
-![Demo](assets/cli-progress.gif)
 
 Presets
 -------
