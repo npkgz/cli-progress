@@ -7,7 +7,7 @@ $ npm install cli-progress --save
 $ yarn add cli-progress --save
 ```
 
-![Demo](assets/video.gif)
+![Demo](assets/cli-progress.gif)
 
 Presets
 -------
