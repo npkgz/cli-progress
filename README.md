@@ -4,6 +4,8 @@ Easy to use Progress-Bar for Command-Line/Terminal Applications
 
 ![Demo](assets/cli-progress.gif)
 
+![Demo](assets/presets.png)
+
 Install
 --------
 
@@ -11,10 +13,6 @@ Install
 $ npm install cli-progress --save
 $ yarn add cli-progress --save
 ```
-
-Presets
--------
-![Demo](assets/presets.png)
 
 Features
 --------
