@@ -30,16 +30,11 @@ Features
 * Works in Asynchronous and Synchronous tasks
 * Preset/Theme support
 
-*Successful tested on Windows10, Debian 8 and Ubuntu 14,15,16*
 
-Progress-Bar
+Usage
 ------------
 
-### Getting Started ###
-
-You can find some basic examples in [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/example.js) - just run the file with `$ node example.js` 
-
-### Usage ###
+Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/example.js) - just try it `$ node example.js` 
 
 ```js
 var _progress = require('cli-progress');
@@ -57,75 +52,18 @@ bar1.update(100);
 bar1.stop();
 ```
 
-### Methods/Syntax ###
+Methods/Syntax
+-----------------------------------
 
-#### Constructor ####
+### Constructor ###
 
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
 ```js
-var <instance> = new namespace.Bar(options:object, preset:object);
+var <instance> = new namespace.Bar(options:object [, preset:object]);
 ```
 
-#### start() ####
-
-Starts the progress bar and set the total and initial value
-
-```js
-<instance>.start(totalValue:int, startValue:int [, payload:object = {}]);
-```
-
-#### update() ####
-
-Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
-
-```js
-<instance>.update(currentValue:int [, payload:object = {}]);
-```
-
-#### increment() ####
-
-Increases the current progress value by a specified amount (default +1)
-
-```js
-<instance>.increment(delta:int);
-```
-
-#### stop() ####
-
-Stops the progress bar and go to next line
-
-```js
-<instance>.stop();
-```
-
-
-### Bar Formatting ###
-
-The progressbar can be customized by using the following build-in placeholders. They can be combined in any order.
-
-- `{bar}` - the progress bar, customizable by the options **barsize**, **barCompleteString** and **barIncompleteString**
-- `{percentage}` - the current progress in percent (0-100)
-- `{total}` - the end value
-- `{value}` - the current value set by last `update()` call
-- `{eta}` - expected time of accomplishment in seconds
-- `{duration}` - elapsed time in seconds
-- `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
-- `{duration_formatted}` - elapsed time formatted into appropriate units
-
-#### Example ####
-
-```
-progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}
-```
-
-is rendered as
-
-```
-progress [========================================] 100% | ETA: 0s | 200/200
-```
-
-### Options ###
+#### Options ####
 
 - `format` (type:string) - progress bar output format @see format section
 - `fps` (type:float) - the maximum update rate (default: 10)
@@ -138,12 +76,69 @@ progress [========================================] 100% | ETA: 0s | 200/200
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 
+### ::start() ###
 
+Starts the progress bar and set the total and initial value
+
+```js
+<instance>.start(totalValue:int, startValue:int [, payload:object = {}]);
+```
+
+### ::update() ###
+
+Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
+
+```js
+<instance>.update(currentValue:int [, payload:object = {}]);
+```
+
+### ::increment() ###
+
+Increases the current progress value by a specified amount (default +1)
+
+```js
+<instance>.increment(delta:int);
+```
+
+### ::stop() ###
+
+Stops the progress bar and go to next line
+
+```js
+<instance>.stop();
+```
+
+
+Bar Formatting
+-----------------------------------
+
+The progressbar can be customized by using the following build-in placeholders. They can be combined in any order.
+
+- `{bar}` - the progress bar, customizable by the options **barsize**, **barCompleteString** and **barIncompleteString**
+- `{percentage}` - the current progress in percent (0-100)
+- `{total}` - the end value
+- `{value}` - the current value set by last `update()` call
+- `{eta}` - expected time of accomplishment in seconds
+- `{duration}` - elapsed time in seconds
+- `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
+- `{duration_formatted}` - elapsed time formatted into appropriate units
+
+### Example ###
+
+```
+progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}
+```
+
+is rendered as
+
+```
+progress [========================================] 100% | ETA: 0s | 200/200
+```
 
 Examples
 ---------------------------------------------
 
-#### Example 1 - Set Options ####
+### Example 1 - Set Options ###
 
 ```js
 // change the progress characters
@@ -158,7 +153,7 @@ var bar = new _progress.Bar({
 });
 ```
 
-#### Example 2 - Change Styles defined by Preset ####
+### Example 2 - Change Styles defined by Preset ###
 
 ```js
 // uee shades preset
