@@ -1,3 +1,6 @@
+### 1.6.1 ###
+* Bugfix: `roundTo` parameter was not set for `elapsedTime` calculation which caused raw float values within formatted time strings - thanks to [rekinyz on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/16) #16
+
 ### 1.6.0 ###
 * Added: Additional payload data which can be used as **custom-tokens** within the bar - thanks to [tobiasps on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/15) #15
 
