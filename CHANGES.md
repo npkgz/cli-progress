@@ -5,7 +5,7 @@
 * Added: Additional payload data which can be used as **custom-tokens** within the bar - thanks to [tobiasps on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/15) #15
 
 ### 1.5.1 ###
-* Bugifx: Progressbar cannot be initialized to 0% - thanks to [erikkallen on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/14) #13
+* Bugfix: Progressbar cannot be initialized to 0% - thanks to [erikkallen on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/14) #13
 * Bugfix: ETA was **NULL** in case the progress bar is initialized with (0/0)
 
 ### 1.5.0 ###
