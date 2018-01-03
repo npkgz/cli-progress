@@ -92,10 +92,10 @@ Sets the current progress value and optionally the payload with values of custom
 
 ### ::increment() ###
 
-Increases the current progress value by a specified amount (default +1)
+Increases the current progress value by a specified amount (default +1). Update payload optionally
 
 ```js
-<instance>.increment(delta:int);
+<instance>.increment([delta:int [, payload:object = {}]]);
 ```
 
 ### ::stop() ###

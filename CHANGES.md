@@ -1,3 +1,6 @@
+### 1.7.0 ###
+* Added: payload argument to `increment()` - feature requested by [dsego on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/18) #18
+
 ### 1.6.1 ###
 * Bugfix: `roundTo` parameter was not set for `elapsedTime` calculation which caused raw float values within formatted time strings - thanks to [rekinyz on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/16) #16
 
