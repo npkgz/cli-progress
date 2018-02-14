@@ -32,7 +32,7 @@ Features
 Usage
 ------------
 
-Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/example.js) - just try it `$ node example.js` 
+Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js` 
 
 ```js
 var _progress = require('cli-progress');
