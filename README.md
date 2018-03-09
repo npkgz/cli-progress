@@ -35,10 +35,10 @@ Usage
 Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js` 
 
 ```js
-var _progress = require('cli-progress');
+const _cliProgress = require('cli-progress');
 
 // create a new progress bar instance and use shades_classic theme
-var bar1 = new _progress.Bar({}, _progress.Presets.shades_classic);
+const bar1 = new _cliProgress.Bar({}, _cliProgress.Presets.shades_classic);
 
 // start the progress bar with a total value of 200 and start value of 0
 bar1.start(200, 0);
@@ -58,7 +58,7 @@ Methods/Syntax
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
 ```js
-var <instance> = new namespace.Bar(options:object [, preset:object]);
+const <instance> = new namespace.Bar(options:object [, preset:object]);
 ```
 
 #### Options ####
@@ -96,6 +96,14 @@ Increases the current progress value by a specified amount (default +1). Update 
 
 ```js
 <instance>.increment([delta:int [, payload:object = {}]]);
+```
+
+### ::setTotal() ###
+
+Sets the total progress value while progressbar is active. Especially useful handling dynamic tasks.
+
+```js
+<instance>.setTotal(totalValue:int);
 ```
 
 ### ::stop() ###

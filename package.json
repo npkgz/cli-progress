@@ -19,9 +19,6 @@
   "repository": "AndiDittrich/Node.CLI-Progress",
   "files": [
     "main.js",
-    "example.js",
-    "example-synchronous.js",
-    "example-presets.js",
     "lib",
     "presets"
   ],

@@ -1,4 +1,4 @@
-var _progress = require('./main');
+var _progress = require('../main');
 var limit = 43;
 
 // long running, recursive function (blocking operation)

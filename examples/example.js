@@ -1,30 +1,27 @@
-var _progress = require('./main');
+const _progress = require('../main');
 
 // run the example sequentially! otherwise both will write to stdout/stderr simultaneous !
 Example1(function(){
-    Example2(function(){
-        Example3(function(){
-            Example4(function(){
-                Example5(function(){
-                    console.log('\nDemo finished!');
-                });
-            });
-        });
-    });
-});
+Example2(function(){
+Example3(function(){
+Example4(function(){
+Example5(function(){
+Example6(function(){
+    console.log('\nDemo finished!');
+});});});});});});
 
 function Example1(onComplete){
     // EXAMPLE 1 ---------------------------------------------
     console.log('\nExample 1 - Standard configuration (4s)');
     // create new progress bar using default values
-    var b1 = new _progress.Bar();
+    const b1 = new _progress.Bar();
     b1.start(200, 0);
 
     // the bar value - will be linear incremented
-    var value = 0;
+    let value = 0;
 
     // 20ms update rate
-    var timer = setInterval(function(){
+    const timer = setInterval(function(){
         // increment value
         value++;
 
@@ -50,7 +47,7 @@ function Example2(onComplete){
     console.log('\nExample 2 - Custom configuration');
 
     // create new progress bar using default values
-    var b2 = new _progress.Bar({
+    const b2 = new _progress.Bar({
         barCompleteChar: '#',
         barIncompleteChar: '_',
         format: ' |- Current Upload Progress: {percentage}%' + ' - ' + '||{bar}||',
@@ -61,7 +58,7 @@ function Example2(onComplete){
     b2.start(100, 0);
 
     // 50ms update rate
-    var timer = setInterval(function(){
+    const timer = setInterval(function(){
         // increment value
         b2.increment();
 
@@ -82,17 +79,17 @@ function Example3(onComplete){
     // EXAMPLE 3 ---------------------------------------------
     console.log('\nExample 3 - Stop the Bar Automatically');
     // create new progress bar using default values
-    var b3 = new _progress.Bar({
+    const b3 = new _progress.Bar({
         stopOnComplete: true,
         clearOnComplete: true
     });
     b3.start(200, 0);
 
     // the bar value - will be linear incremented
-    var value = 0;
+    let value = 0;
 
     // 20ms update rate
-    var timer = setInterval(function(){
+    const timer = setInterval(function(){
         // increment value
         value++;
 
@@ -114,7 +111,7 @@ function Example4(onComplete){
     // EXAMPLE 1 ---------------------------------------------
     console.log('\nExample 4 - Start ZERO');
     // create new progress bar using default values
-    var b1 = new _progress.Bar();
+    const b1 = new _progress.Bar();
     b1.start(0, 0);
 
     setTimeout(function(){
@@ -129,7 +126,7 @@ function Example5(onComplete){
     // EXAMPLE 5 ---------------------------------------------
     console.log('\nExample 5 - Custom Payload');
     // create new progress bar
-    var b1 = new _progress.Bar({
+    const b1 = new _progress.Bar({
         format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed}'
     });
 
@@ -139,18 +136,18 @@ function Example5(onComplete){
     });
 
     // the bar value - will be linear incremented
-    var value = 0;
+    let value = 0;
 
-    var speedData = [];
+    const speedData = [];
 
     // 20ms update rate
-    var timer = setInterval(function(){
+    let timer = setInterval(function(){
         // increment value
         value++;
 
         // example speed data
         speedData.push(Math.random()*2+5);
-        var currentSpeedData = speedData.splice(-10);
+        const currentSpeedData = speedData.splice(-10);
 
         // update the bar value
         b1.update(value, {
@@ -168,4 +165,43 @@ function Example5(onComplete){
             onComplete.apply(this);
         }
     }, 20);
+}
+
+
+function Example6(onComplete){
+    // EXAMPLE 1 ---------------------------------------------
+    console.log('\nExample 6 - Set dynamically the total progress');
+    // create new progress bar using default values
+    const b1 = new _progress.Bar({}, _progress.Presets.shades_grey);
+    b1.start(200, 0);
+
+    // the bar value - will be linear incremented
+    let value = 0;
+
+    // 50ms update rate
+    const timer = setInterval(function(){
+        // increment value
+        value++;
+
+        // update the bar value
+        b1.update(value)
+
+        // change the total value
+        if (value > 1500){
+            b1.setTotal(3000);
+        }else if (value > 150){
+            b1.setTotal(2000);
+        }
+
+        // limit reached ?
+        if (value >= b1.getTotal()){
+            // stop timer
+            clearInterval(timer);
+
+            b1.stop();
+
+            // run complete callback
+            onComplete.apply(this);
+        }
+    }, 15);
 }

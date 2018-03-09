@@ -1,5 +1,5 @@
 ### 1.8.0 ###
-* Added: method `setTotal()` to manipulate the total value within running progress-bar -  feature requested by [ReggaePanda on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/19) #19
+* Added: method `setTotal()` to manipulate the total value within running progress-bar - feature requested by [ReggaePanda on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/19) #19
 * Changed: moved example file to `examples/` directory
 
 ### 1.7.0 ###
