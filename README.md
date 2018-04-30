@@ -18,7 +18,7 @@ Features
 --------
 
 * **Simple**, **Robust** and **Easy** to use
-* Full customizable output format (various placeholders are available)
+* Full customizable output format (constious placeholders are available)
 * Custom Bar Characters
 * FPS limiter
 * ETA calculation based on elapsed time
@@ -71,7 +71,8 @@ const <instance> = new namespace.Bar(options:object [, preset:object]);
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
 - `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
-- `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false)
+- `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
+- `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to trim the output to terminal width
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 
 ### ::start() ###
@@ -150,7 +151,7 @@ Examples
 // change the progress characters
 // set fps limit to 5
 // change the output stream and barsize
-var bar = new _progress.Bar({
+const bar = new _progress.Bar({
     barCompleteChar: '#',
     barIncompleteChar: '.',
     fps: 5,
@@ -164,7 +165,7 @@ var bar = new _progress.Bar({
 ```js
 // uee shades preset
 // change the barsize
-var bar = new _progress.Bar({
+const bar = new _progress.Bar({
     barsize: 65
 }, _progress.Presets.shades_grey);
 ```
@@ -173,7 +174,7 @@ var bar = new _progress.Bar({
 
 ```js
 // create new progress bar with custom token "speed"
-var bar = new _progress.Bar({
+const bar = new _progress.Bar({
     format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit'
 });
 
@@ -199,7 +200,7 @@ bar.stop();
 **File** `mypreset.js`
 
 ```js
-var _colors = require('colors');
+const _colors = require('colors');
 
 module.exports = {
     format: _colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
@@ -211,9 +212,9 @@ module.exports = {
 **Application**
 
 ```js
-var _mypreset = require('./mypreset.js');
+const _mypreset = require('./mypreset.js');
 
-var bar = new _progress.Bar({
+const bar = new _progress.Bar({
     barsize: 65
 }, _mypreset);
 ```

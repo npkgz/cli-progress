@@ -1,3 +1,18 @@
+## Branch 2.x ##
+
+Upgrade is possible without any code modifications! requires **node.js 4**
+
+* Added: option `linewrap` to disable terminal line wrapping (default)
+* Changed: requires **node.js >= 4**
+* Changed: Native ES2015 class syntax
+* Changed: renamed application entry file to `cli-progress.js`
+* Changed: low-level terminal interactions are encapsulated within `Terminal` class
+* Changed: terminal/cursor settings are restored after progress bar stopped
+* Bugfix: used hex ascii escape sequences instaed of octals to avoid javascript errors in recent nodejs version
+* Bugfix: disabled line wrapping by default to avoid multiple line breaks on small terminals (cut on the right) - reported by [puppeteer701 on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/20) #20
+
+## Branch 1.x ##
+
 ### 1.8.0 ###
 * Added: method `setTotal()` to manipulate the total value within running progress-bar - feature requested by [ReggaePanda on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/19) #19
 * Changed: moved example file to `examples/` directory

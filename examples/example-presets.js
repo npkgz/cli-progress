@@ -1,4 +1,4 @@
-var _progress = require('../main');
+var _progress = require('../cli-progress');
 var _colors = require('colors');
 
 // helper function to display preset
