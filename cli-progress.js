@@ -1,10 +1,8 @@
+const _Bar = require('./lib/Bar');
+const _Presets = require('./presets/index');
+
 // sub-module access
 module.exports = {
-    Bar: require('./lib/Bar'),
-    Presets: {
-        legacy: require('./presets/legacy'),
-        shades_classic: require('./presets/shades-classic'),
-        shades_grey: require('./presets/shades-grey'),
-        rect: require('./presets/rect')
-    }
+    Bar: _Bar,
+    Presets: _Presets
 };

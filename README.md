@@ -72,7 +72,7 @@ const <instance> = new namespace.Bar(options:object [, preset:object]);
 - `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
-- `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to trim the output to terminal width
+- `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 
 ### ::start() ###
