@@ -1,5 +1,14 @@
 ## Branch 2.x ##
 
+### 2.1.0 ###
+
+* Changed: ETA value of type `Infinity` is displayed as **INF**, `NaN` as **NULL** - feature requested by [AxelTerizaki on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/21) #21
+* Changed: Limited the maximum ETA value to `100000s` (**INF** is displayed in this case)
+* Changed: ETA calculation moved to own scope
+* Bugfix: example `example-notty.php` was broken
+
+### 2.0.0 ###
+
 Upgrade is possible without any code modifications! requires **node.js 4**
 
 * Added: option `linewrap` to disable terminal line wrapping (default)
