@@ -7,7 +7,7 @@ function showPreset(name, pos){
 
     // create a new progress bar with preset
     var bar = new _progress.Bar({
-	position: pos
+	    align: pos
     }, _progress.Presets[name] || _progress.Presets.legacy);
     bar.start(200, 0);
 

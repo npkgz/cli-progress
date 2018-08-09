@@ -2,6 +2,7 @@
 
 ### 2.1.0 ###
 
+* Added: `align` option to change the position of the progress bar (left, center, right) - thanks to [sidneys on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/22) #22
 * Changed: ETA value of type `Infinity` is displayed as **INF**, `NaN` as **NULL** - feature requested by [AxelTerizaki on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/21) #21
 * Changed: Limited the maximum ETA value to `100000s` (**INF** is displayed in this case)
 * Changed: ETA calculation moved to own scope

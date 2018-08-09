@@ -69,7 +69,7 @@ const <instance> = new namespace.Bar(options:object [, preset:object]);
 - `stopOnComplete` (type:boolean) - automatically call `stop()` when the value reaches the total (default: false)
 - `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
-- `position` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
+- `align` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
 - `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
 - `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
