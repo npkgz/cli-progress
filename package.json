@@ -33,7 +33,6 @@
     "license": "MIT",
     "dependencies": {
         "colors": "^1.1.2",
-        "string-width": "^2.1.1",
-        "window-size": "^1.1.1"
+        "string-width": "^2.1.1"
     }
 }
