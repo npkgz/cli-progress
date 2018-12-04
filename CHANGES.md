@@ -1,5 +1,9 @@
 ## Branch 2.x ##
 
+### 2.1.1 ###
+
+* Bugifx: preset object got altered by options - thanks to [rvalitov on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/27) #27
+
 ### 2.1.0 ###
 
 * Added: `align` option to change the position of the progress bar (left, center, right) - thanks to [sidneys on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/22) #22

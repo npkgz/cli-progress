@@ -1,4 +1,4 @@
-var _colors = require('colors');
+const _colors = require('colors');
 
 // cli-progress legacy style as of 1.x
 module.exports = {
