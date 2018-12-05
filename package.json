@@ -1,6 +1,6 @@
 {
     "name": "cli-progress",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Easy to use Progress-Bar for Command-Line/Terminal Applications",
     "keywords": [
         "cli",
