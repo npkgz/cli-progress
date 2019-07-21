@@ -11,7 +11,7 @@ Install
 
 ```bash
 $ npm install cli-progress --save
-$ yarn add cli-progress --save
+$ yarn add cli-progress
 ```
 
 Features
