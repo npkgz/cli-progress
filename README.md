@@ -1,41 +1,37 @@
-CLI-Progress
-============
+# CLI-Progress
+
 Easy to use Progress-Bar for Command-Line/Terminal Applications
 
 ![Demo](assets/cli-progress.gif)
 
 ![Demo](assets/presets.png)
 
-Install
---------
+## Install
 
 ```bash
 $ npm install cli-progress --save
 $ yarn add cli-progress
 ```
 
-Features
---------
+## Features
 
-* **Simple**, **Robust** and **Easy** to use
-* Full customizable output format (constious placeholders are available)
-* Custom Bar Characters
-* FPS limiter
-* ETA calculation based on elapsed time
-* Custom Tokens to display additional data (payload) within the bar
-* Only visible in TTY environments
-* No callbacks required - designed as pure, external controlled UI widget
-* Works in Asynchronous and Synchronous tasks
-* Preset/Theme support
+- **Simple**, **Robust** and **Easy** to use
+- Full customizable output format (constious placeholders are available)
+- Custom Bar Characters
+- FPS limiter
+- ETA calculation based on elapsed time
+- Custom Tokens to display additional data (payload) within the bar
+- Only visible in TTY environments
+- No callbacks required - designed as pure, external controlled UI widget
+- Works in Asynchronous and Synchronous tasks
+- Preset/Theme support
 
-
-Usage
-------------
+## Usage
 
 Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js`
 
 ```js
-const _cliProgress = require('cli-progress');
+const _cliProgress = require("cli-progress");
 
 // create a new progress bar instance and use shades_classic theme
 const bar1 = new _cliProgress.Bar({}, _cliProgress.Presets.shades_classic);
@@ -50,10 +46,9 @@ bar1.update(100);
 bar1.stop();
 ```
 
-Methods/Syntax
------------------------------------
+## Methods/Syntax
 
-### Constructor ###
+### Constructor
 
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
@@ -61,7 +56,7 @@ Initialize a new Progress bar. An instance can be used **multiple** times! it's 
 const <instance> = new namespace.Bar(options:object [, preset:object]);
 ```
 
-#### Options ####
+#### Options
 
 - `format` (type:string) - progress bar output format @see format section
 - `fps` (type:float) - the maximum update rate (default: 10)
@@ -76,7 +71,7 @@ const <instance> = new namespace.Bar(options:object [, preset:object]);
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 
-### ::start() ###
+### ::start()
 
 Starts the progress bar and set the total and initial value
 
@@ -84,7 +79,7 @@ Starts the progress bar and set the total and initial value
 <instance>.start(totalValue:int, startValue:int [, payload:object = {}]);
 ```
 
-### ::update() ###
+### ::update()
 
 Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
 
@@ -92,7 +87,7 @@ Sets the current progress value and optionally the payload with values of custom
 <instance>.update(currentValue:int [, payload:object = {}]);
 ```
 
-### ::increment() ###
+### ::increment()
 
 Increases the current progress value by a specified amount (default +1). Update payload optionally
 
@@ -100,7 +95,7 @@ Increases the current progress value by a specified amount (default +1). Update 
 <instance>.increment([delta:int [, payload:object = {}]]);
 ```
 
-### ::setTotal() ###
+### ::setTotal()
 
 Sets the total progress value while progressbar is active. Especially useful handling dynamic tasks.
 
@@ -108,7 +103,7 @@ Sets the total progress value while progressbar is active. Especially useful han
 <instance>.setTotal(totalValue:int);
 ```
 
-### ::stop() ###
+### ::stop()
 
 Stops the progress bar and go to next line
 
@@ -116,9 +111,7 @@ Stops the progress bar and go to next line
 <instance>.stop();
 ```
 
-
-Bar Formatting
------------------------------------
+## Bar Formatting
 
 The progressbar can be customized by using the following build-in placeholders. They can be combined in any order.
 
@@ -131,7 +124,7 @@ The progressbar can be customized by using the following build-in placeholders. 
 - `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
 - `{duration_formatted}` - elapsed time formatted into appropriate units
 
-### Example ###
+### Example
 
 ```
 progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}
@@ -143,47 +136,50 @@ is rendered as
 progress [========================================] 100% | ETA: 0s | 200/200
 ```
 
-Examples
----------------------------------------------
+## Examples
 
-### Example 1 - Set Options ###
+### Example 1 - Set Options
 
 ```js
 // change the progress characters
 // set fps limit to 5
 // change the output stream and barsize
 const bar = new _progress.Bar({
-    barCompleteChar: '#',
-    barIncompleteChar: '.',
-    fps: 5,
-    stream: process.stdout,
-    barsize: 65,
-    position: 'center'
+  barCompleteChar: "#",
+  barIncompleteChar: ".",
+  fps: 5,
+  stream: process.stdout,
+  barsize: 65,
+  position: "center"
 });
 ```
 
-### Example 2 - Change Styles defined by Preset ###
+### Example 2 - Change Styles defined by Preset
 
 ```js
 // uee shades preset
 // change the barsize
-const bar = new _progress.Bar({
+const bar = new _progress.Bar(
+  {
     barsize: 65,
-    position: 'right'
-}, _progress.Presets.shades_grey);
+    position: "right"
+  },
+  _progress.Presets.shades_grey
+);
 ```
 
-### Example 3 - Custom Payload ###
+### Example 3 - Custom Payload
 
 ```js
 // create new progress bar with custom token "speed"
 const bar = new _progress.Bar({
-    format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit'
+  format:
+    "progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit"
 });
 
 // initialize the bar - set payload token "speed" with the default value "N/A"
 bar.start(200, 0, {
-    speed: "N/A"
+  speed: "N/A"
 });
 
 // some code/update loop
@@ -191,58 +187,61 @@ bar.start(200, 0, {
 
 // update bar value. set custom token "speed" to 125
 bar.update(5, {
-    speed: '125'
+  speed: "125"
 });
 
 // process finished
 bar.stop();
 ```
 
-### Example 4 - Custom Presets ###
+### Example 4 - Custom Presets
 
 **File** `mypreset.js`
 
 ```js
-const _colors = require('colors');
+const _colors = require("colors");
 
 module.exports = {
-    format: _colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
-    barCompleteChar: '\u2588',
-    barIncompleteChar: '\u2591'
+  format:
+    _colors.red(" {bar}") +
+    " {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit",
+  barCompleteChar: "\u2588",
+  barIncompleteChar: "\u2591"
 };
 ```
 
 **Application**
 
 ```js
-const _mypreset = require('./mypreset.js');
+const _mypreset = require("./mypreset.js");
 
-const bar = new _progress.Bar({
+const bar = new _progress.Bar(
+  {
     barsize: 65
-}, _mypreset);
+  },
+  _mypreset
+);
 ```
 
-
-Presets/Themes
----------------------------------------------
+## Presets/Themes
 
 Need a more modern appearance ? **cli-progress** supports predefined themes via presets. You are welcome to add your custom one :)
 
 But keep in mind that a lot of the "special-chars" rely on Unicode - it might not work as expected on legacy systems.
 
-### Default Presets ###
+### Default Presets
 
 The following presets are included by default
 
-* **legacy** - Styles as of cli-progress v1.3.0
-* **shades-classic** - Unicode background shades are used for the bar
-* **shades-grey** - Unicode background shades with grey bar
-* **rect** - Unicode Rectangles
+- **legacy** - Styles as of cli-progress v1.3.0
+- **shades-classic** - Unicode background shades are used for the bar
+- **shades-grey** - Unicode background shades with grey bar
+- **rect** - Unicode Rectangles
 
-Any Questions ? Report a Bug ? Enhancements ?
----------------------------------------------
+## Any Questions ? Report a Bug ? Enhancements ?
+
 Please open a new issue on [GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues)
 
-License
--------
+## License
+
 CLI-Progress is OpenSource and licensed under the Terms of [The MIT License (X11)](http://opensource.org/licenses/MIT). You're welcome to [contribute](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/CONTRIBUTE.md)!
