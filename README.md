@@ -32,7 +32,7 @@ Features
 Usage
 ------------
 
-Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js` 
+Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js`
 
 ```js
 const _cliProgress = require('cli-progress');
@@ -70,8 +70,8 @@ const <instance> = new namespace.Bar(options:object [, preset:object]);
 - `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
 - `align` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
-- `barCompleteString` (type:char) - character to use as "complete" indicator in the bar (default: "=")
-- `barIncompleteString` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
+- `barCompleteChar` (type:char) - character to use as "complete" indicator in the bar (default: "=")
+- `barIncompleteChar` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
