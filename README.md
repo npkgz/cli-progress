@@ -10,8 +10,8 @@ Install
 --------
 
 ```bash
+$ yarn add cli-progress
 $ npm install cli-progress --save
-$ yarn add cli-progress --save
 ```
 
 Features

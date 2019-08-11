@@ -1,7 +1,7 @@
 {
     "name": "cli-progress",
-    "version": "2.1.1",
-    "description": "Easy to use Progress-Bar for Command-Line/Terminal Applications",
+    "version": "3.0.0-BETA1",
+    "description": "easy to use progress-bar for command-line/terminal applications",
     "keywords": [
         "cli",
         "tty",
