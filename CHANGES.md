@@ -1,5 +1,10 @@
 ## Branch 3.x ##
 
+### 3.1.0 ###
+
+* Added: `stopOnComplete` support within `MultiBar` - thanks to [Nox-404 on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/35)
+* Changed: initial throttel time of `MultiBar` is controlled by `fps` option instead of static `500ms` value
+
 ### 3.0.0 ###
 
 * Added: multi-progressbar support - feature requested [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/26)

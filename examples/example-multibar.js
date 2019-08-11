@@ -15,8 +15,9 @@ const multibar = new _progress.MultiBar({
     format: ' {bar} | "{file}" | {value}/{total}',
     hideCursor: true,
     barCompleteChar: '\u2588',
-    barIncompleteChar: '\u2591'
-
+    barIncompleteChar: '\u2591',
+    clearOnComplete: false,
+    stopOnComplete: true
 });
 
 console.log("Downloading files..\n");
@@ -44,10 +45,12 @@ const timer = setInterval(function(){
         }
     }
 
-    // stop progress bar ?
-    if (downloadPending === false){
+    // progress bar running ?
+    // check "isActive" property in case you've enabled "stopOnComplete" !
+    if (multibar.isActive === false){
         clearInterval(timer);
 
-        multibar.stop();
+        //multibar.stop();
+        console.log('Download complete!')
     }
-}, 10);
+}, 3);
