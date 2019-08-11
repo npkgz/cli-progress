@@ -1,5 +1,5 @@
-var _progress = require('../cli-progress');
-var _colors = require('colors');
+const _progress = require('../cli-progress');
+const _colors = require('colors');
 
 function Example5(){
     console.log('');

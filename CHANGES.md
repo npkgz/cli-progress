@@ -1,8 +1,11 @@
 ## Branch 3.x ##
 
+### 3.0.0 ###
+
 * Added: multi-progressbar support - feature requested [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/26)
 * Added: option `synchronousUpdate` to control the synchronized redraw during `update()` call (default=`true`)
 * Changed: project split into multiple classes
+* Changed: default cli progress output is written to `stdout` instead of `stderr`
 
 ## Branch 2.x ##
 

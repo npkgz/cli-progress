@@ -6,6 +6,9 @@ Easy to use Progress-Bar for Command-Line/Terminal Applications
 
 ![Demo](assets/presets.png)
 
+
+
+
 Install
 --------
 
@@ -19,6 +22,8 @@ Features
 
 * **Simple**, **Robust** and **Easy** to use
 * Full customizable output format (constious placeholders are available)
+* Single progressbar mode
+* Multi progessbar mode
 * Custom Bar Characters
 * FPS limiter
 * ETA calculation based on elapsed time
@@ -27,7 +32,6 @@ Features
 * No callbacks required - designed as pure, external controlled UI widget
 * Works in Asynchronous and Synchronous tasks
 * Preset/Theme support
-
 
 Usage
 ------------
@@ -38,7 +42,7 @@ Multiple examples are available e.g. [example.js](https://github.com/AndiDittric
 const _cliProgress = require('cli-progress');
 
 // create a new progress bar instance and use shades_classic theme
-const bar1 = new _cliProgress.Bar({}, _cliProgress.Presets.shades_classic);
+const bar1 = new _cliProgress.SingleBar({}, _cliProgress.Presets.shades_classic);
 
 // start the progress bar with a total value of 200 and start value of 0
 bar1.start(200, 0);
@@ -50,31 +54,49 @@ bar1.update(100);
 bar1.stop();
 ```
 
-Methods/Syntax
+Single Bar Mode
 -----------------------------------
+
+![Demo](assets/presets.png)
+
+### Example ###
+
+```js
+const _cliProgress = require('cli-progress');
+
+// create new progress bar
+const b1 = new _cliProgress.SingleBar({
+    format: 'CLI Progress |' + _colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks || Speed: {speed}',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591',
+    hideCursor: true
+});
+
+// initialize the bar - defining payload token "speed" with the default value "N/A"
+b1.start(200, 0, {
+    speed: "N/A"
+});
+
+// update values
+b1.increment();
+b1.update(20);
+
+// stop the bar
+b1.stop();
+```
 
 ### Constructor ###
 
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
 ```js
-const <instance> = new namespace.Bar(options:object [, preset:object]);
+const _cliProgress = require('cli-progress');
+
+const <instance> = new _cliProgress.SingleBar(options:object [, preset:object]);
 ```
 
 #### Options ####
 
-- `format` (type:string) - progress bar output format @see format section
-- `fps` (type:float) - the maximum update rate (default: 10)
-- `stream` (type:stream) - output stream to use (default: `process.stderr`)
-- `stopOnComplete` (type:boolean) - automatically call `stop()` when the value reaches the total (default: false)
-- `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
-- `barsize` (type:int) - the length of the progress bar in chars (default: 40)
-- `align` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
-- `barCompleteChar` (type:char) - character to use as "complete" indicator in the bar (default: "=")
-- `barIncompleteChar` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
-- `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
-- `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
-- `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 
 ### ::start() ###
 
@@ -115,6 +137,88 @@ Stops the progress bar and go to next line
 ```js
 <instance>.stop();
 ```
+
+Multi Bar Mode
+-----------------------------------
+
+![Demo](assets/multibar.png)
+
+### Example ### 
+
+```js
+const _cliProgress = require('./cli-progress');
+
+// create new container
+const multibar = new _cliProgress.MultiBar({
+    clearOnComplete: false,
+    hideCursor: true
+
+}, _cliProgress.Presets.shades_grey);
+
+// add bars
+const b1 = multibar.create(200, 0);
+const b2 = multibar.create(1000, 0);
+
+// control bars
+b1.increment();
+b2.update(20, {filename: "helloworld.txt"});
+
+// stop all bars
+multibar.stop();
+```
+
+### Constructor ###
+
+Initialize a new multiprogress container. Bars need to be added. The options/presets are used for each single bar!
+
+```js
+const _cliProgress = require('cli-progress');
+
+const <instance> = new _cliProgress.MultiBar(options:object [, preset:object]);
+```
+
+### ::create() ###
+
+Adds a new progress bar to the container and starts the bar. Returns regular `SingleBar` object which can be individually controlled.
+
+```js
+const <barInstance> = <instance>.start(totalValue:int, startValue:int [, payload:object = {}]);
+```
+
+### ::remove() ###
+
+Removes an existing bar from the multi progress container.
+
+```js
+<instance>.remove(<barInstance>:object);
+```
+
+### ::stop() ###
+
+Stops the all progress bars
+
+```js
+<instance>.stop();
+```
+
+Options
+-----------------------------------
+
+The following options can be changed
+
+- `format` (type:string) - progress bar output format @see format section
+- `fps` (type:float) - the maximum update rate (default: 10)
+- `stream` (type:stream) - output stream to use (default: `process.stdout`)
+- `stopOnComplete` (type:boolean) - automatically call `stop()` when the value reaches the total (default: false)
+- `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
+- `barsize` (type:int) - the length of the progress bar in chars (default: 40)
+- `align` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
+- `barCompleteChar` (type:char) - character to use as "complete" indicator in the bar (default: "=")
+- `barIncompleteChar` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
+- `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
+- `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
+- `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
+- `synchronousUpdate` (type:boolean) - trigger redraw during `update()` in case threshold time x2 is exceeded (default: true)
 
 
 Bar Formatting
