@@ -4,6 +4,7 @@
 
 * Added: `stopOnComplete` support within `MultiBar` - thanks to [Nox-404 on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/35)
 * Changed: initial throttel time of `MultiBar` is controlled by `fps` option instead of static `500ms` value
+* Bugfix: provided option didn't take precedence over the preset as in v2 - thanks to [AxelTerizaki on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/37) #37
 
 ### 3.0.0 ###
 
