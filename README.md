@@ -28,7 +28,7 @@ Features
 * FPS limiter
 * ETA calculation based on elapsed time
 * Custom Tokens to display additional data (payload) within the bar
-* Only visible in TTY environments
+* TTY and NOTTY mode
 * No callbacks required - designed as pure, external controlled UI widget
 * Works in Asynchronous and Synchronous tasks
 * Preset/Theme support
@@ -219,7 +219,8 @@ The following options can be changed
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 - `synchronousUpdate` (type:boolean) - trigger redraw during `update()` in case threshold time x2 is exceeded (default: true)
-
+- `noTTYOutput` (type:boolean) - enable scheduled output to notty streams - e.g. redirect to files (default: true)
+- `notTTYSchedule` (type:int) - set the output schedule/interval for notty output in `ms` (default: 2000ms)
 
 Bar Formatting
 -----------------------------------
