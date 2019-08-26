@@ -146,7 +146,7 @@ Multi Bar Mode
 ### Example ### 
 
 ```js
-const _cliProgress = require('./cli-progress');
+const _cliProgress = require('cli-progress');
 
 // create new container
 const multibar = new _cliProgress.MultiBar({
