@@ -31,16 +31,12 @@ for (const filename in files){
 
 const timer = setInterval(function(){
 
-    // flag
-    let downloadPending = false;
-
     // increment
     for (let i=0; i<bars.length;i++){
         const bar = bars[i];
 
         // download complete ?
         if (bar.value < bar.total){
-            downloadPending = true;
             bar.increment();
         }
     }
