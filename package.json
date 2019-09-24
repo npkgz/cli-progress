@@ -34,5 +34,9 @@
     "dependencies": {
         "colors": "^1.1.2",
         "string-width": "^2.1.1"
+    },
+    "devDependencies": {
+        "eslint": "^6.4.0",
+        "eslint-config-aenondynamics": "^0.2.0"
     }
 }
