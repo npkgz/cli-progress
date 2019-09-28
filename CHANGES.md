@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.1.1 ###
+
+* Bugfix: removed cursor save/restore calls for multibars - clearOnComplete might not work on all environments - thanks to [sayem314 onGitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/40)
+
 ### 3.1.0 ###
 
 * Added: notty support (interval/schedule based output) - feature requested [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/25)

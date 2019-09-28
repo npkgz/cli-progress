@@ -16,7 +16,7 @@ const multibar = new _progress.MultiBar({
     hideCursor: true,
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
-    clearOnComplete: false,
+    clearOnComplete: true,
     stopOnComplete: true
 });
 
