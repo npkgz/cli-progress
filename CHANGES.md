@@ -1,7 +1,8 @@
 ## Branch 3.x ##
 
-### 3.1.1 ###
+### 3.2.0 ###
 
+* Added: `emptyOnZero` option to display total:0 bars as empty, not full - thanks to [nickcmaynard on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/42)
 * Bugfix: removed cursor save/restore calls for multibars - clearOnComplete might not work on all environments - thanks to [sayem314 onGitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/40)
 
 ### 3.1.0 ###
