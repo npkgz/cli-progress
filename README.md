@@ -29,6 +29,7 @@ Features
 * No callbacks required - designed as pure, external controlled UI widget
 * Works in Asynchronous and Synchronous tasks
 * Preset/Theme support
+* Custom bar formatters (via callback)
 
 Usage
 ------------
@@ -203,7 +204,7 @@ Options
 
 The following options can be changed
 
-- `format` (type:string) - progress bar output format @see format section
+- `format` (type:string|function) - progress bar output format @see format section
 - `fps` (type:float) - the maximum update rate (default: 10)
 - `stream` (type:stream) - output stream to use (default: `process.stdout`)
 - `stopOnComplete` (type:boolean) - automatically call `stop()` when the value reaches the total (default: false)

@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.3.0 ###
+
+* Added: option to pass custom formatters as callback via `options.format`
+
 ### 3.2.0 ###
 
 * Added: `emptyOnZero` option to display total:0 bars as empty, not full - thanks to [nickcmaynard on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/42)
