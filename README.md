@@ -94,7 +94,7 @@ const <instance> = new _cliProgress.SingleBar(options:object [, preset:object]);
 
 #### Options ####
 
-	`formatTime` : A function to format itself the  `duration_formatted` and `duration_formatted`. Receive time in millisecond ans return a string
+	`formatTime` : A function to format itself the  `duration_formatted` and `duration_formatted`. Receive time in second and return a string
 
 ### ::start() ###
 
