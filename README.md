@@ -279,6 +279,8 @@ const bar = new _progress.Bar({
 
 ### Example 3 - Custom Payload ###
 
+The payload object keys should only contain keys matching standard `\w+` regex!
+
 ```js
 // create new progress bar with custom token "speed"
 const bar = new _progress.Bar({

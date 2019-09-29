@@ -3,6 +3,7 @@
 ### 3.3.0 ###
 
 * Added: option to pass custom formatters as callback via `options.format`
+* Changed: replaced static placeholder code with generic regex (performance enhancement)
 
 ### 3.2.0 ###
 
