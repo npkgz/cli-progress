@@ -94,6 +94,7 @@ const <instance> = new _cliProgress.SingleBar(options:object [, preset:object]);
 
 #### Options ####
 
+	`formatTime` : A function to format itself the  `duration_formatted` and `duration_formatted`. Receive time in millisecond ans return a string
 
 ### ::start() ###
 
@@ -140,7 +141,7 @@ Multi Bar Mode
 
 ![Demo](assets/multibar.png)
 
-### Example ### 
+### Example ###
 
 ```js
 const _cliProgress = require('cli-progress');
