@@ -34,7 +34,8 @@
     "license": "MIT",
     "dependencies": {
         "colors": "^1.1.2",
-        "string-width": "^2.1.1"
+        "string-width": "^2.1.1",
+        "string.prototype.padstart": "^3.0.0"
     },
     "devDependencies": {
         "eslint": "^6.4.0",
