@@ -237,14 +237,52 @@ The progressbar can be customized by using the following build-in placeholders. 
 
 ### Example ###
 
-```
-progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}
+```js
+const opt = {
+    format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}'
+}
 ```
 
 is rendered as
 
 ```
 progress [========================================] 100% | ETA: 0s | 200/200
+```
+
+Custom formatters
+-----------------------------------
+
+Instead of a "static" format string it is also possible to pass a custom callback function as formatter.
+For a full example (including params) take a look on `lib/formatter.js`
+
+### Example ###
+
+```js
+function myFormatter(options, params, payload){
+
+    // bar grows dynamically by current progrss - no whitespaces are added
+    const bar = options.barCompleteString.substr(0, Math.round(params.progress*options.barsize));
+
+    // end value reached ?
+    // change color to green when finished
+    if (params.value >= params.total){
+        return '# ' + _colors.grey(payload.task) + '   ' + _colors.green(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
+    }else{
+        return '# ' + payload.task + '   ' + _colors.yellow(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
+    }    
+}
+
+const opt = {
+    format: myFormatter
+}
+```
+
+is rendered as
+
+```
+# Task 1     0/200 --[]--
+# Task 1     98/200 --[████████████████████]--
+# Task 1     200/200 --[████████████████████████████████████████]--
 ```
 
 Examples
