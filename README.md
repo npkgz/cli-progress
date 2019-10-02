@@ -216,7 +216,7 @@ The following options can be changed
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
-- `synchronousUpdate` (type:boolean) - trigger redraw during `update()` in case threshold time x2 is exceeded (default: true)
+- `synchronousUpdate` (type:boolean) - trigger redraw during `update()` in case threshold time x2 is exceeded (default: true) - limited to single bar usage
 - `noTTYOutput` (type:boolean) - enable scheduled output to notty streams - e.g. redirect to files (default: false)
 - `notTTYSchedule` (type:int) - set the output schedule/interval for notty output in `ms` (default: 2000ms)
 - `emptyOnZero` (type:boolean) - display progress bars with 'total' of zero(0) as empty, not full (default: false)

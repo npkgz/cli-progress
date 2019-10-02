@@ -1,5 +1,11 @@
 ## Branch 3.x ##
 
+### 3.3.1 ###
+
+* Bugifx: synchronous update may cause unexpected behaviour on multibars - limited to single bars
+* Changed: renamed internal eta `push()` method to `update()`
+* Changed: moved internal eta calculation call into `update()`
+
 ### 3.3.0 ###
 
 * Added: option to pass custom formatters as callback via `options.format`
