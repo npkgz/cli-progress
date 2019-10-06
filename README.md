@@ -106,10 +106,10 @@ Starts the progress bar and set the total and initial value
 
 ### ::update() ###
 
-Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
+Sets the current progress value and optionally the payload with values of custom tokens as a second parameter. To update payload only, set currentValue to `null`.
 
 ```js
-<instance>.update(currentValue:int [, payload:object = {}]);
+<instance>.update([currentValue:int [, payload:object = {}]]);
 ```
 
 ### ::increment() ###
