@@ -106,10 +106,10 @@ Starts the progress bar and set the total and initial value
 
 ### ::update() ###
 
-Sets the current progress value and optionally the payload with values of custom tokens as a second parameter
+Sets the current progress value and optionally the payload with values of custom tokens as a second parameter. To update payload only, set currentValue to `null`.
 
 ```js
-<instance>.update(currentValue:int [, payload:object = {}]);
+<instance>.update([currentValue:int [, payload:object = {}]]);
 ```
 
 ### ::increment() ###
@@ -141,7 +141,7 @@ Multi Bar Mode
 
 ![Demo](assets/multibar.png)
 
-### Example ### 
+### Example ###
 
 ```js
 const _cliProgress = require('cli-progress');
@@ -220,6 +220,7 @@ The following options can be changed
 - `noTTYOutput` (type:boolean) - enable scheduled output to notty streams - e.g. redirect to files (default: false)
 - `notTTYSchedule` (type:int) - set the output schedule/interval for notty output in `ms` (default: 2000ms)
 - `emptyOnZero` (type:boolean) - display progress bars with 'total' of zero(0) as empty, not full (default: false)
+- `forceRedraw` (type:boolean) - trigger redraw on every frame even if progress remains the same; can be useful if progress bar gets overwritten by other concurrent writes to the terminal (default: false)
 
 Bar Formatting
 -----------------------------------
@@ -269,7 +270,7 @@ function myFormatter(options, params, payload){
         return '# ' + _colors.grey(payload.task) + '   ' + _colors.green(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
     }else{
         return '# ' + payload.task + '   ' + _colors.yellow(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
-    }    
+    }
 }
 
 const opt = {
