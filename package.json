@@ -24,7 +24,9 @@
         "presets/"
     ],
     "scripts": {
-        "test": "eslint lib/**.js"
+        "lint": "eslint lib/**.js",
+        "pretest": "npm run lint",
+        "test": "mocha test/**/*.test.js"
     },
     "engines": {
         "node": ">=4"
@@ -38,6 +40,7 @@
     },
     "devDependencies": {
         "eslint": "^6.4.0",
-        "eslint-config-aenondynamics": "^0.2.0"
+        "eslint-config-aenondynamics": "^0.2.0",
+        "mocha": "^6.2.1"
     }
 }
