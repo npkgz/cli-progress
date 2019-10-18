@@ -1,6 +1,38 @@
-const {expect} = require('chai');
+const _assert = require('assert');
 const _formatter = require('../../lib/formatter');
-const _defaults = require('../_defaults');
+const _defaults = {
+    options: {
+        throttleTime: 100,
+        stream: null,
+        terminal: null,
+        clearOnComplete: false,
+        stopOnComplete: false,
+        barsize: 40,
+        align: 'left',
+        hideCursor: false,
+        linewrap: false,
+        barCompleteString: '████████████████████████████████████████',
+        barIncompleteString: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░',
+        format: ' {bar} {percentage}% | ETA: {eta}s | {value}/{total}',
+        etaBufferLength: 10,
+        synchronousUpdate: true,
+        noTTYOutput: false,
+        notTTYSchedule: 2000,
+        emptyOnZero: false,
+        forceRedraw: false
+    },
+    params: {
+        progress: 0.2,
+        eta: '20',
+        startTime: 1571383670022,
+        total: 100,
+        value: 20,
+        maxWidth: 147
+    },
+    payload: {
+
+    }
+};
 
 describe('formatter', function() {
     let defaults = null;
@@ -15,7 +47,7 @@ describe('formatter', function() {
         const result = _formatter(options, params, payload);
         const expected = ' ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20% | ETA: 20s | 20/100';
 
-        expect(result).to.equal(expected);
+        _assert.equal(result, expected);
     });
 
     it('should leave placeholder for undefined values', () => {
@@ -27,7 +59,7 @@ describe('formatter', function() {
         const result = _formatter(options, params, payload);
         const expected = '{undefined_value} ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20%';
 
-        expect(result).to.equal(expected);
+        _assert.equal(result, expected);
     });
 
     describe('render falsy values', () => {
@@ -40,7 +72,7 @@ describe('formatter', function() {
             const result = _formatter(options, params, payload);
             const expected = '0 ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20%';
 
-            expect(result).to.equal(expected);
+            _assert.equal(result, expected);
         });
 
         it('should render empty string value', () => {
@@ -52,7 +84,7 @@ describe('formatter', function() {
             const result = _formatter(options, params, payload);
             const expected = ' ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20%';
 
-            expect(result).to.equal(expected);
+            _assert.equal(result, expected);
         });
 
         it('should render null value', () => {
@@ -64,7 +96,7 @@ describe('formatter', function() {
             const result = _formatter(options, params, payload);
             const expected = 'null ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20%';
 
-            expect(result).to.equal(expected);
+            _assert.equal(result, expected);
         });
 
         it('should render boolean false value', () => {
@@ -76,7 +108,7 @@ describe('formatter', function() {
             const result = _formatter(options, params, payload);
             const expected = 'false ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 20%';
 
-            expect(result).to.equal(expected);
+            _assert.equal(result, expected);
         });
     });
 });

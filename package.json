@@ -26,7 +26,7 @@
     "scripts": {
         "lint": "eslint lib/**.js",
         "pretest": "npm run lint",
-        "test": "mocha test/**/*.spec.js"
+        "test": "mocha test/**/*.test.js"
     },
     "engines": {
         "node": ">=4"
@@ -39,15 +39,8 @@
         "string-width": "^2.1.1"
     },
     "devDependencies": {
-        "chai": "^4.2.0",
         "eslint": "^6.4.0",
         "eslint-config-aenondynamics": "^0.2.0",
-        "husky": "^3.0.9",
         "mocha": "^6.2.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-push": "npm test"
-        }
     }
 }
