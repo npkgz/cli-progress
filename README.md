@@ -37,10 +37,10 @@ Usage
 Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js`
 
 ```js
-const _cliProgress = require('cli-progress');
+const cliProgress = require('cli-progress');
 
 // create a new progress bar instance and use shades_classic theme
-const bar1 = new _cliProgress.SingleBar({}, _cliProgress.Presets.shades_classic);
+const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 
 // start the progress bar with a total value of 200 and start value of 0
 bar1.start(200, 0);
@@ -60,10 +60,10 @@ Single Bar Mode
 ### Example ###
 
 ```js
-const _cliProgress = require('cli-progress');
+const cliProgress = require('cli-progress');
 
 // create new progress bar
-const b1 = new _cliProgress.SingleBar({
+const b1 = new cliProgress.SingleBar({
     format: 'CLI Progress |' + _colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks || Speed: {speed}',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
@@ -88,9 +88,9 @@ b1.stop();
 Initialize a new Progress bar. An instance can be used **multiple** times! it's not required to re-create it!
 
 ```js
-const _cliProgress = require('cli-progress');
+const cliProgress = require('cli-progress');
 
-const <instance> = new _cliProgress.SingleBar(options:object [, preset:object]);
+const <instance> = new cliProgress.SingleBar(options:object [, preset:object]);
 ```
 
 #### Options ####
@@ -144,14 +144,14 @@ Multi Bar Mode
 ### Example ###
 
 ```js
-const _cliProgress = require('cli-progress');
+const cliProgress = require('cli-progress');
 
 // create new container
-const multibar = new _cliProgress.MultiBar({
+const multibar = new cliProgress.MultiBar({
     clearOnComplete: false,
     hideCursor: true
 
-}, _cliProgress.Presets.shades_grey);
+}, cliProgress.Presets.shades_grey);
 
 // add bars
 const b1 = multibar.create(200, 0);
@@ -170,9 +170,9 @@ multibar.stop();
 Initialize a new multiprogress container. Bars need to be added. The options/presets are used for each single bar!
 
 ```js
-const _cliProgress = require('cli-progress');
+const cliProgress = require('cli-progress');
 
-const <instance> = new _cliProgress.MultiBar(options:object [, preset:object]);
+const <instance> = new cliProgress.MultiBar(options:object [, preset:object]);
 ```
 
 ### ::create() ###
@@ -259,7 +259,7 @@ For a full example (including params) take a look on `lib/formatter.js`
 ### Example ###
 
 ```js
-function myFormatter(options, params, payload){
+function formatter(options, params, payload){
 
     // bar grows dynamically by current progrss - no whitespaces are added
     const bar = options.barCompleteString.substr(0, Math.round(params.progress*options.barsize));
@@ -274,7 +274,7 @@ function myFormatter(options, params, payload){
 }
 
 const opt = {
-    format: myFormatter
+    format: formatter
 }
 ```
 
@@ -345,7 +345,7 @@ bar.stop();
 
 ### Example 4 - Custom Presets ###
 
-**File** `mypreset.js`
+**File** `myPreset.js`
 
 ```js
 const _colors = require('colors');
@@ -360,11 +360,11 @@ module.exports = {
 **Application**
 
 ```js
-const _mypreset = require('./mypreset.js');
+const myPreset = require('./myPreset.js');
 
 const bar = new _progress.Bar({
     barsize: 65
-}, _mypreset);
+}, myPreset);
 ```
 
 
