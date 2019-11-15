@@ -1,5 +1,13 @@
 ## Branch 3.x ##
 
+### 3.4.0 ###
+
+* Added: testsuites based on mocha - thanks to [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/49)
+* Added: automatic tests via [Travis CI](https://travis-ci.com/)
+* Bugfix: Fixing issues with falsy values in format which causes remdering artifacts - thanks to [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/49)
+* Bugfix: documentation of the `stream` options was wrong - thanks to [ehmicky on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/51)
+* Changed: updated examples/syntax of `README.md` - thanks to [justsml on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/50)
+
 ### 3.3.1 ###
 
 * Bugifx: synchronous update may cause unexpected behaviour on multibars - limited to single bars
