@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/AndiDittrich/Node.CLI-Progress.svg?branch=master)](https://travis-ci.org/AndiDittrich/Node.CLI-Progress)
+
 CLI-Progress
 ============
-Easy to use Progress-Bar for Command-Line/Terminal Applications
+easy to use progress-bar for command-line/terminal applications
 
 ![Demo](assets/cli-progress.gif)
 
