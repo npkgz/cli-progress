@@ -201,6 +201,14 @@ Stops the all progress bars
 <instance>.stop();
 ```
 
+### ::log(args) ###
+
+Renders log into output (like: `console.log`) before progress bars, without disturbing them
+
+```js
+<instance>.log("Operation started!");
+```
+
 Options
 -----------------------------------
 
