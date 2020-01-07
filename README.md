@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/AndiDittrich/Node.CLI-Progress.svg?branch=master)](https://travis-ci.org/AndiDittrich/Node.CLI-Progress)
 
-[Examples](examples/) | [Presets](presets/) | [Events](docs/events.md)
+[Single Bar](#single-bar-mode) | [Multi Bar](#multi-bar-mode) | [Options](#options-1) | [Examples](examples/) | [Presets](presets/) | [Events](docs/events.md)
 
 CLI-Progress
 ============
