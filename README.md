@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/AndiDittrich/Node.CLI-Progress.svg?branch=master)](https://travis-ci.org/AndiDittrich/Node.CLI-Progress)
 
+[Examples](examples/) | [Presets](presets/) | [Events](docs/events.md)
+
 CLI-Progress
 ============
 easy to use progress-bar for command-line/terminal applications
@@ -223,6 +225,13 @@ The following options can be changed
 - `notTTYSchedule` (type:int) - set the output schedule/interval for notty output in `ms` (default: 2000ms)
 - `emptyOnZero` (type:boolean) - display progress bars with 'total' of zero(0) as empty, not full (default: false)
 - `forceRedraw` (type:boolean) - trigger redraw on every frame even if progress remains the same; can be useful if progress bar gets overwritten by other concurrent writes to the terminal (default: false)
+
+Events
+-----------------------------------
+
+The classes extends [EventEmitter](https://nodejs.org/api/events.html) which allows you to hook into different events.
+
+See [event docs](docs/events.md) for detailed informations + examples.
 
 Bar Formatting
 -----------------------------------

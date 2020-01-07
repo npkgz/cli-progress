@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.5.0 ###
+
+* Added: support for events via [EventEmitter](https://nodejs.org/api/events.html) - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/58)
+
 ### 3.4.0 ###
 
 * Added: testsuites based on mocha - thanks to [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/49)
