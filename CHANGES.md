@@ -1,5 +1,14 @@
 ## Branch 3.x ##
 
+### 3.6.0 ###
+
+* Added: support for custom time-format function
+* Added: support for custom bar-format function
+* Added: support for custom value-format function
+* Added: auto-padding option to enforce fixed size of values - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/60)
+* Added: `barGlue` option to insert ascii escape sequences (e.g. for colorization) between the bar complete/incomplete elements - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/53)
+* Bugfix: `eta` value can be negative for multibars in case the bar is alredy completed
+
 ### 3.5.0 ###
 
 * Added: support for events via [EventEmitter](https://nodejs.org/api/events.html) - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/58)

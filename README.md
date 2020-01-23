@@ -225,6 +225,12 @@ The following options can be changed
 - `notTTYSchedule` (type:int) - set the output schedule/interval for notty output in `ms` (default: 2000ms)
 - `emptyOnZero` (type:boolean) - display progress bars with 'total' of zero(0) as empty, not full (default: false)
 - `forceRedraw` (type:boolean) - trigger redraw on every frame even if progress remains the same; can be useful if progress bar gets overwritten by other concurrent writes to the terminal (default: false)
+- `barGlue` (type:string) - a "glue" string between the complete and incomplete bar elements used to insert ascii control sequences for colorization (default: empty) - Note: in case you add visible "glue" characters the barsize will be increased by the length of the glue!
+- `autopadding` (type: boolean) - add padding chars to formatted time and percentage to force fixed width (default: false) - Note: handled standard format functions!
+- `autopaddingChar` (type: string) - the character sequence used for autopadding (default: "   ") - Note: due to performance optimizations this value requies a length of 3 identical chars
+- `formatBar` (type: function) - a custom bar formatter function which renders the bar-element (default: [format-bar.js](lib/format-bar.js))
+- `formatTime` (type: function) - a custom timer formatter function which renders the formatted time elements like `eta_formatted` and `duration-formatted` (default: [format-time.js](lib/format-time.js))
+- `formatValue` (type: function) - a custom value formatter function which renders all other values (default: [format-value.js](lib/format-value.js))
 
 Events
 -----------------------------------
