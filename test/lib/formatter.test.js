@@ -19,7 +19,13 @@ const _defaults = {
         noTTYOutput: false,
         notTTYSchedule: 2000,
         emptyOnZero: false,
-        forceRedraw: false
+        forceRedraw: false,
+        autopadding: false,
+        autopaddingChar: '',
+        formatBar: null,
+        formatTime: null,
+        formatValue: null,
+        barGlue: ''
     },
     params: {
         progress: 0.2,
