@@ -1,6 +1,6 @@
 {
     "name": "cli-progress",
-    "version": "3.6.0",
+    "version": "3.6.1",
     "description": "easy to use progress-bar for command-line/terminal applications",
     "keywords": [
         "cli",
@@ -36,11 +36,11 @@
     "license": "MIT",
     "dependencies": {
         "colors": "^1.1.2",
-        "string-width": "^2.1.1"
+        "string-width": "^4.2.0"
     },
     "devDependencies": {
         "eslint": "^6.4.0",
         "eslint-config-aenondynamics": "^0.2.0",
-        "mocha": "^6.2.1"
+        "mocha": "^7.1.1"
     }
 }
