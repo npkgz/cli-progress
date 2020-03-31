@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.6.1 ###
+
+* Bugfix: bar initialization overrides options within all instances - thanks to [BigBrainAFK on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/64)
+
 ### 3.6.0 ###
 
 * Added: support for custom time-format function
