@@ -140,6 +140,17 @@ Stops the progress bar and go to next line
 <instance>.stop();
 ```
 
+### ::updateETA() ###
+
+Force eta calculation update (long running processes) without altering the progress values.
+
+Note: you may want to increase `etaBuffer` size - otherwise it can cause `INF` eta values in case the value didn't changed within the time series.
+
+```js
+<instance>.updateETA();
+```
+
+
 Multi Bar Mode
 -----------------------------------
 
@@ -220,6 +231,7 @@ The following options can be changed
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
+- `etaAsynchronousUpdate` (type:boolean) - trigger an eta calculation update during asynchronous rendering trigger using the current value - should only be used for long running processes in conjunction with lof `fps` values and large `etaBuffer` (default: false)
 - `synchronousUpdate` (type:boolean) - trigger redraw during `update()` in case threshold time x2 is exceeded (default: true) - limited to single bar usage
 - `noTTYOutput` (type:boolean) - enable scheduled output to notty streams - e.g. redirect to files (default: false)
 - `notTTYSchedule` (type:int) - set the output schedule/interval for notty output in `ms` (default: 2000ms)

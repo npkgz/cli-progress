@@ -1,5 +1,10 @@
 ## Branch 3.x ##
 
+### 3.7.0 ###
+
+* Added: asynchronous eta update for long running processes (optional) - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/65)
+* Added: method to trigger eta calculation without progress update
+
 ### 3.6.1 ###
 
 * Bugfix: bar initialization overrides options within all instances - thanks to [BigBrainAFK on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/64)
