@@ -83,6 +83,9 @@ b1.start(200, 0, {
 b1.increment();
 b1.update(20);
 
+// increment and update speed
+b1.increment({ speed: '42 kbps' });
+
 // stop the bar
 b1.stop();
 ```
