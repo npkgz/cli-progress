@@ -1,5 +1,11 @@
 ## Branch 3.x ##
 
+### 3.8.0 ###
+
+* Changed: allow to pass payload as first argument to `increment()` with implicit delta of 1 - thanks to [ecdeveloper on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/67)
+* Changed: allow to pass payload as first argument to `update()` without updating bar value
+
+
 ### 3.7.0 ###
 
 * Added: asynchronous eta update for long running processes (optional) - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/65)
