@@ -114,6 +114,9 @@ Sets the current progress value and optionally the payload with values of custom
 
 ```js
 <instance>.update([currentValue:int [, payload:object = {}]]);
+
+// update progress without altering value
+<instance>.update([payload:object = {}]);
 ```
 
 ### ::increment() ###
@@ -122,6 +125,9 @@ Increases the current progress value by a specified amount (default +1). Update 
 
 ```js
 <instance>.increment([delta:int [, payload:object = {}]]);
+
+// delta=1 assumed
+<instance>.increment(payload:object = {}]);
 ```
 
 ### ::setTotal() ###

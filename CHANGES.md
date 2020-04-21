@@ -4,7 +4,7 @@
 
 * Changed: allow to pass payload as first argument to `increment()` with implicit delta of 1 - thanks to [ecdeveloper on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/67)
 * Changed: allow to pass payload as first argument to `update()` without updating bar value
-
+* Bugfix: `formatTime` option ignored due to type - thanks to [omjadas on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/68)
 
 ### 3.7.0 ###
 
