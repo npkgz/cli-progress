@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.8.1 ###
+
+* Bugfix: percentage calculation used `Math.round` which caused incorrect values for edge cases - thanks to [OxCom on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/70)
+
 ### 3.8.0 ###
 
 * Changed: allow to pass payload as first argument to `increment()` with implicit delta of 1 - thanks to [ecdeveloper on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/67)
