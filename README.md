@@ -419,6 +419,14 @@ The following presets are included by default
 * **shades-grey** - Unicode background shades with grey bar
 * **rect** - Unicode Rectangles
 
+
+Compatibility
+---------------------------------------------
+
+**cli-progress** is designed for linux/macOS/container applications which mostly providing standard compliant tty terminals/shells. In non-tty mode it is suitible to be used with logging daemons (cyclic output).
+
+It also works with PowerShell on Windows 10 - the legacy command prompt on outdated Windows versions won't work as expected and is not supported!
+
 Any Questions ? Report a Bug ? Enhancements ?
 ---------------------------------------------
 Please open a new issue on [GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues)
