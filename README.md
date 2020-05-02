@@ -245,7 +245,7 @@ The following options can be changed
 - `forceRedraw` (type:boolean) - trigger redraw on every frame even if progress remains the same; can be useful if progress bar gets overwritten by other concurrent writes to the terminal (default: false)
 - `barGlue` (type:string) - a "glue" string between the complete and incomplete bar elements used to insert ascii control sequences for colorization (default: empty) - Note: in case you add visible "glue" characters the barsize will be increased by the length of the glue!
 - `autopadding` (type: boolean) - add padding chars to formatted time and percentage to force fixed width (default: false) - Note: handled standard format functions!
-- `autopaddingChar` (type: string) - the character sequence used for autopadding (default: "   ") - Note: due to performance optimizations this value requies a length of 3 identical chars
+- `autopaddingChar` (type: string) - the character sequence used for autopadding (default: "   ") - Note: due to performance optimizations this value requires a length of 3 identical chars
 - `formatBar` (type: function) - a custom bar formatter function which renders the bar-element (default: [format-bar.js](lib/format-bar.js))
 - `formatTime` (type: function) - a custom timer formatter function which renders the formatted time elements like `eta_formatted` and `duration-formatted` (default: [format-time.js](lib/format-time.js))
 - `formatValue` (type: function) - a custom value formatter function which renders all other values (default: [format-value.js](lib/format-value.js))
@@ -255,7 +255,7 @@ Events
 
 The classes extends [EventEmitter](https://nodejs.org/api/events.html) which allows you to hook into different events.
 
-See [event docs](docs/events.md) for detailed informations + examples.
+See [event docs](docs/events.md) for detailed information + examples.
 
 Bar Formatting
 -----------------------------------
@@ -296,7 +296,7 @@ For a full example (including params) take a look on `lib/formatter.js`
 ```js
 function formatter(options, params, payload){
 
-    // bar grows dynamically by current progrss - no whitespaces are added
+    // bar grows dynamically by current progress - no whitespaces are added
     const bar = options.barCompleteString.substr(0, Math.round(params.progress*options.barsize));
 
     // end value reached ?
@@ -423,7 +423,7 @@ The following presets are included by default
 Compatibility
 ---------------------------------------------
 
-**cli-progress** is designed for linux/macOS/container applications which mostly providing standard compliant tty terminals/shells. In non-tty mode it is suitible to be used with logging daemons (cyclic output).
+**cli-progress** is designed for linux/macOS/container applications which mostly providing standard compliant tty terminals/shells. In non-tty mode it is suitable to be used with logging daemons (cyclic output).
 
 It also works with PowerShell on Windows 10 - the legacy command prompt on outdated Windows versions won't work as expected and is not supported!
 
