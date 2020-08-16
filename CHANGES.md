@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.9.0 ###
+
+* Added: example howto use multibars in synchronous context
+
 ### 3.8.2 ###
 
 * Bugfix: bar duration not stopped until all bars have finished - thanks to [omjadas on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/71)
