@@ -231,7 +231,7 @@ The following options can be changed
 - `stopOnComplete` (type:boolean) - automatically call `stop()` when the value reaches the total (default: false)
 - `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
-- `autoExpand` (type:int) - ignores `barsize` and expands the bar to the window width (default: false)
+- `autoExpand` (type:boolean) - ignores `barsize` and expands the bar to the window width (default: false)
 - `align` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
 - `barCompleteChar` (type:char) - character to use as "complete" indicator in the bar (default: "=")
 - `barIncompleteChar` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
