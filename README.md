@@ -321,6 +321,16 @@ is rendered as
 # Task 1     200/200 --[████████████████████████████████████████]--
 ```
 
+
+### Example 2 ###
+
+You can also access the default format functions to use them within your formatter:
+
+```js
+const {TimeFormat, ValueFormat, BarFormat, Formatter} = require('cli-progess').Format;
+...
+```
+
 Examples
 ---------------------------------------------
 

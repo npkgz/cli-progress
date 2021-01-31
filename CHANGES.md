@@ -2,8 +2,9 @@
 
 ### 3.9.0 ###
 
+* Added: exported standard formatter and format helper
 * Added: example howto use multibars in synchronous context
-* Changed: upper eta display limit to `1e7` (115days)
+* Changed: upper eta display limit to `1e7` (115days) #92
 
 ### 3.8.2 ###
 

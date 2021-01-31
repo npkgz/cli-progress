@@ -1,6 +1,6 @@
 {
     "name": "cli-progress",
-    "version": "3.8.2",
+    "version": "3.9.0",
     "description": "easy to use progress-bar for command-line/terminal applications",
     "keywords": [
         "cli",
@@ -32,7 +32,7 @@
         "node": ">=4"
     },
     "main": "./cli-progress.js",
-    "author": "Andi Dittrich (https://andidittrich.de)",
+    "author": "Andi Dittrich (https://andidittrich.com)",
     "license": "MIT",
     "dependencies": {
         "colors": "^1.1.2",
