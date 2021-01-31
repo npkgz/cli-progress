@@ -3,6 +3,7 @@
 ### 3.9.0 ###
 
 * Added: example howto use multibars in synchronous context
+* Changed: upper eta display limit to `1e7` (115days)
 
 ### 3.8.2 ###
 
