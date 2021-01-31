@@ -266,7 +266,7 @@ The progressbar can be customized by using the following build-in placeholders. 
 - `{percentage}` - the current progress in percent (0-100)
 - `{total}` - the end value
 - `{value}` - the current value set by last `update()` call
-- `{eta}` - expected time of accomplishment in seconds
+- `{eta}` - expected time of accomplishment in seconds (limmited to 115days, otherwise INF is displayed)
 - `{duration}` - elapsed time in seconds
 - `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
 - `{duration_formatted}` - elapsed time formatted into appropriate units
@@ -291,7 +291,7 @@ Custom formatters
 Instead of a "static" format string it is also possible to pass a custom callback function as formatter.
 For a full example (including params) take a look on `lib/formatter.js`
 
-### Example ###
+### Example 1 ###
 
 ```js
 function formatter(options, params, payload){
