@@ -15,9 +15,9 @@
         "utility",
         "widget"
     ],
-    "homepage": "https://github.com/AndiDittrich/Node.CLI-Progress",
-    "bugs": "https://github.com/AndiDittrich/Node.CLI-Progress/issues",
-    "repository": "AndiDittrich/Node.CLI-Progress",
+    "homepage": "https://github.com/npkgz/cli-progress",
+    "bugs": "https://github.com/npkgz/cli-progress/issues",
+    "repository": "npkgz/cli-progress",
     "files": [
         "cli-progress.js",
         "lib/",

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/AndiDittrich/Node.CLI-Progress.svg?branch=master)](https://travis-ci.org/AndiDittrich/Node.CLI-Progress)
+[![Build Status](https://travis-ci.org/npkgz/cli-progress.svg?branch=master)](https://travis-ci.org/npkgz/cli-progress)
 
 [Single Bar](#single-bar-mode) | [Multi Bar](#multi-bar-mode) | [Options](#options-1) | [Examples](examples/) | [Presets](presets/) | [Events](docs/events.md)
 
@@ -38,7 +38,7 @@ Features
 Usage
 ------------
 
-Multiple examples are available e.g. [example.js](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/examples/example.js) - just try it `$ node example.js`
+Multiple examples are available e.g. [example.js](https://github.com/npkgz/cli-progress/blob/master/examples/example.js) - just try it `$ node example.js`
 
 ```js
 const cliProgress = require('cli-progress');
@@ -439,8 +439,8 @@ It also works with PowerShell on Windows 10 - the legacy command prompt on outda
 
 Any Questions ? Report a Bug ? Enhancements ?
 ---------------------------------------------
-Please open a new issue on [GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues)
+Please open a new issue on [GitHub](https://github.com/npkgz/cli-progress/issues)
 
 License
 -------
-CLI-Progress is OpenSource and licensed under the Terms of [The MIT License (X11)](http://opensource.org/licenses/MIT). You're welcome to [contribute](https://github.com/AndiDittrich/Node.CLI-Progress/blob/master/CONTRIBUTE.md)!
+CLI-Progress is OpenSource and licensed under the Terms of [The MIT License (X11)](http://opensource.org/licenses/MIT). You're welcome to [contribute](https://github.com/npkgz/cli-progress/blob/master/CONTRIBUTE.md)!

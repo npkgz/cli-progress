@@ -8,47 +8,47 @@
 
 ### 3.8.2 ###
 
-* Bugfix: bar duration not stopped until all bars have finished - thanks to [omjadas on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/71)
+* Bugfix: bar duration not stopped until all bars have finished - thanks to [omjadas on GitHub](https://github.com/npkgz/cli-progress/issues/71)
 
 ### 3.8.1 ###
 
-* Bugfix: percentage calculation used `Math.round` which caused incorrect values for edge cases - thanks to [OxCom on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/70)
+* Bugfix: percentage calculation used `Math.round` which caused incorrect values for edge cases - thanks to [OxCom on GitHub](https://github.com/npkgz/cli-progress/issues/70)
 
 ### 3.8.0 ###
 
-* Changed: allow to pass payload as first argument to `increment()` with implicit delta of 1 - thanks to [ecdeveloper on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/67)
+* Changed: allow to pass payload as first argument to `increment()` with implicit delta of 1 - thanks to [ecdeveloper on GitHub](https://github.com/npkgz/cli-progress/pull/67)
 * Changed: allow to pass payload as first argument to `update()` without updating bar value
-* Bugfix: `formatTime` option ignored due to type - thanks to [omjadas on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/68)
+* Bugfix: `formatTime` option ignored due to type - thanks to [omjadas on GitHub](https://github.com/npkgz/cli-progress/issues/68)
 
 ### 3.7.0 ###
 
-* Added: asynchronous eta update for long running processes (optional) - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/65)
+* Added: asynchronous eta update for long running processes (optional) - feature [requested on GitHub](https://github.com/npkgz/cli-progress/issues/65)
 * Added: method to trigger eta calculation without progress update
 
 ### 3.6.1 ###
 
-* Bugfix: bar initialization overrides options within all instances - thanks to [BigBrainAFK on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/64)
+* Bugfix: bar initialization overrides options within all instances - thanks to [BigBrainAFK on GitHub](https://github.com/npkgz/cli-progress/issues/64)
 
 ### 3.6.0 ###
 
 * Added: support for custom time-format function
 * Added: support for custom bar-format function
 * Added: support for custom value-format function
-* Added: auto-padding option to enforce fixed size of values - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/60)
-* Added: `barGlue` option to insert ascii escape sequences (e.g. for colorization) between the bar complete/incomplete elements - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/53)
+* Added: auto-padding option to enforce fixed size of values - feature [requested on GitHub](https://github.com/npkgz/cli-progress/issues/60)
+* Added: `barGlue` option to insert ascii escape sequences (e.g. for colorization) between the bar complete/incomplete elements - feature [requested on GitHub](https://github.com/npkgz/cli-progress/issues/53)
 * Bugfix: `eta` value can be negative for multibars in case the bar is alredy completed
 
 ### 3.5.0 ###
 
-* Added: support for events via [EventEmitter](https://nodejs.org/api/events.html) - feature [requested on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/58)
+* Added: support for events via [EventEmitter](https://nodejs.org/api/events.html) - feature [requested on GitHub](https://github.com/npkgz/cli-progress/pull/58)
 
 ### 3.4.0 ###
 
-* Added: testsuites based on mocha - thanks to [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/49)
+* Added: testsuites based on mocha - thanks to [on GitHub](https://github.com/npkgz/cli-progress/pull/49)
 * Added: automatic tests via [Travis CI](https://travis-ci.org/)
-* Bugfix: Fixing issues with falsy values in format which causes remdering artifacts - thanks to [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/49)
-* Bugfix: documentation of the `stream` options was wrong - thanks to [ehmicky on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/51)
-* Changed: updated examples/syntax of `README.md` - thanks to [justsml on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/50)
+* Bugfix: Fixing issues with falsy values in format which causes remdering artifacts - thanks to [on GitHub](https://github.com/npkgz/cli-progress/pull/49)
+* Bugfix: documentation of the `stream` options was wrong - thanks to [ehmicky on GitHub](https://github.com/npkgz/cli-progress/pull/51)
+* Changed: updated examples/syntax of `README.md` - thanks to [justsml on GitHub](https://github.com/npkgz/cli-progress/pull/50)
 
 ### 3.3.1 ###
 
@@ -63,19 +63,19 @@
 
 ### 3.2.0 ###
 
-* Added: `emptyOnZero` option to display total:0 bars as empty, not full - thanks to [nickcmaynard on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/42)
-* Bugfix: removed cursor save/restore calls for multibars - clearOnComplete might not work on all environments - thanks to [sayem314 onGitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/40)
+* Added: `emptyOnZero` option to display total:0 bars as empty, not full - thanks to [nickcmaynard on GitHub](https://github.com/npkgz/cli-progress/pull/42)
+* Bugfix: removed cursor save/restore calls for multibars - clearOnComplete might not work on all environments - thanks to [sayem314 onGitHub](https://github.com/npkgz/cli-progress/issues/40)
 
 ### 3.1.0 ###
 
-* Added: notty support (interval/schedule based output) - feature requested [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/25)
-* Added: `stopOnComplete` support within `MultiBar` - thanks to [Nox-404 on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/35)
+* Added: notty support (interval/schedule based output) - feature requested [on GitHub](https://github.com/npkgz/cli-progress/issues/25)
+* Added: `stopOnComplete` support within `MultiBar` - thanks to [Nox-404 on GitHub](https://github.com/npkgz/cli-progress/pull/35)
 * Changed: initial throttel time of `MultiBar` is controlled by `fps` option instead of static `500ms` value
-* Bugfix: provided option didn't take precedence over the preset as in v2 - thanks to [AxelTerizaki on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/37) #37
+* Bugfix: provided option didn't take precedence over the preset as in v2 - thanks to [AxelTerizaki on GitHub](https://github.com/npkgz/cli-progress/issues/37) #37
 
 ### 3.0.0 ###
 
-* Added: multi-progressbar support - feature requested [on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/26)
+* Added: multi-progressbar support - feature requested [on GitHub](https://github.com/npkgz/cli-progress/issues/26)
 * Added: option `synchronousUpdate` to control the synchronized redraw during `update()` call (default=`true`)
 * Changed: project split into multiple classes
 * Changed: default cli progress output is written to `stdout` instead of `stderr`
@@ -84,12 +84,12 @@
 
 ### 2.1.1 ###
 
-* Bugifx: preset object got altered by options - thanks to [rvalitov on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/27) #27
+* Bugifx: preset object got altered by options - thanks to [rvalitov on GitHub](https://github.com/npkgz/cli-progress/issues/27) #27
 
 ### 2.1.0 ###
 
-* Added: `align` option to change the position of the progress bar (left, center, right) - thanks to [sidneys on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/22) #22
-* Changed: ETA value of type `Infinity` is displayed as **INF**, `NaN` as **NULL** - feature requested by [AxelTerizaki on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/21) #21
+* Added: `align` option to change the position of the progress bar (left, center, right) - thanks to [sidneys on GitHub](https://github.com/npkgz/cli-progress/pull/22) #22
+* Changed: ETA value of type `Infinity` is displayed as **INF**, `NaN` as **NULL** - feature requested by [AxelTerizaki on GitHub](https://github.com/npkgz/cli-progress/issues/21) #21
 * Changed: Limited the maximum ETA value to `100000s` (**INF** is displayed in this case)
 * Changed: ETA calculation moved to own scope
 * Bugfix: example `example-notty.php` was broken
@@ -105,29 +105,29 @@ Upgrade is possible without any code modifications! requires **node.js 4**
 * Changed: low-level terminal interactions are encapsulated within `Terminal` class
 * Changed: terminal/cursor settings are restored after progress bar stopped
 * Bugfix: used hex ascii escape sequences instaed of octals to avoid javascript errors in recent nodejs version
-* Bugfix: disabled line wrapping by default to avoid multiple line breaks on small terminals (cut on the right) - reported by [puppeteer701 on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/20) #20
+* Bugfix: disabled line wrapping by default to avoid multiple line breaks on small terminals (cut on the right) - reported by [puppeteer701 on GitHub](https://github.com/npkgz/cli-progress/issues/20) #20
 
 ## Branch 1.x ##
 
 ### 1.8.0 ###
-* Added: method `setTotal()` to manipulate the total value within running progress-bar - feature requested by [ReggaePanda on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/19) #19
+* Added: method `setTotal()` to manipulate the total value within running progress-bar - feature requested by [ReggaePanda on GitHub](https://github.com/npkgz/cli-progress/issues/19) #19
 * Changed: moved example file to `examples/` directory
 
 ### 1.7.0 ###
-* Added: payload argument to `increment()` - feature requested by [dsego on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/18) #18
+* Added: payload argument to `increment()` - feature requested by [dsego on GitHub](https://github.com/npkgz/cli-progress/issues/18) #18
 
 ### 1.6.1 ###
-* Bugfix: `roundTo` parameter was not set for `elapsedTime` calculation which caused raw float values within formatted time strings - thanks to [rekinyz on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/16) #16
+* Bugfix: `roundTo` parameter was not set for `elapsedTime` calculation which caused raw float values within formatted time strings - thanks to [rekinyz on GitHub](https://github.com/npkgz/cli-progress/pull/16) #16
 
 ### 1.6.0 ###
-* Added: Additional payload data which can be used as **custom-tokens** within the bar - thanks to [tobiasps on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/15) #15
+* Added: Additional payload data which can be used as **custom-tokens** within the bar - thanks to [tobiasps on GitHub](https://github.com/npkgz/cli-progress/pull/15) #15
 
 ### 1.5.1 ###
-* Bugfix: Progressbar cannot be initialized to 0% - thanks to [erikkallen on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/14) #13
+* Bugfix: Progressbar cannot be initialized to 0% - thanks to [erikkallen on GitHub](https://github.com/npkgz/cli-progress/pull/14) #13
 * Bugfix: ETA was **NULL** in case the progress bar is initialized with (0/0)
 
 ### 1.5.0 ###
-* Added: **0** values for total/progress initialization are allowed - feature requested by [jfmmm on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/11) #11
+* Added: **0** values for total/progress initialization are allowed - feature requested by [jfmmm on GitHub](https://github.com/npkgz/cli-progress/issues/11) #11
 
 ### 1.4.0 ###
 * Added: **Preset/Theme support**. Different bar-styles can be loaded from internal library (in addition to full customization)
@@ -139,7 +139,7 @@ Upgrade is possible without any code modifications! requires **node.js 4**
 
 ### 1.3.1 ###
 * Added: `example-notty` to test the behaviour of progress bar in non-interactive environments (input streams closed)
-* Bugfix: `update()` throws an error in **non-tty** environments - reported by [Ognian on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/9) #9
+* Bugfix: `update()` throws an error in **non-tty** environments - reported by [Ognian on GitHub](https://github.com/npkgz/cli-progress/issues/9) #9
 
 ### 1.3.0 ###
 * Added: `stopOnComplete` option to automatically call `stop()` when the value reaches the total - thanks to [lennym on GitHub](https://github.com/lennym) #7
@@ -151,13 +151,13 @@ Upgrade is possible without any code modifications! requires **node.js 4**
 * Bugfix: FPS calculation error which caused performance issues - thanks to [lennym on GitHub](https://github.com/lennym) #7
 
 ### 1.1.2 ###
-* Bugfix: stdout.cursorTo/stdout.clearLine is not a function; replaced by `readline` - thanks to [remcoder on GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/pull/2)
+* Bugfix: stdout.cursorTo/stdout.clearLine is not a function; replaced by `readline` - thanks to [remcoder on GitHub](https://github.com/npkgz/cli-progress/pull/2)
 
 ### 1.1.1 ###
 * Bugfix: Hide cursor options was enabled by default
 
 ### 1.1.0 ###
-* Added: Support for synchronous operations (interval has been replaced by timeout and throttle time) - feature requested [GitHub](https://github.com/AndiDittrich/Node.CLI-Progress/issues/1)
+* Added: Support for synchronous operations (interval has been replaced by timeout and throttle time) - feature requested [GitHub](https://github.com/npkgz/cli-progress/issues/1)
 * Added: Synchronous Operation Example `example-synchronous.js`
 * Added: Option to hide the cursor `options.hideCursor` - default set to false
 * Changed: Improved ETA calculation
