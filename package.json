@@ -36,6 +36,7 @@
     "license": "MIT",
     "dependencies": {
         "colors": "^1.1.2",
+        "ms": "^2.1.3",
         "string-width": "^4.2.0"
     },
     "devDependencies": {
