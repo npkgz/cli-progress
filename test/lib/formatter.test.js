@@ -29,7 +29,7 @@ const _defaults = {
 	},
 	params: {
 		progress: 0.2,
-		eta: '20',
+		eta: '20s',
 		startTime: 1571383670022,
 		total: 100,
 		value: 20,
