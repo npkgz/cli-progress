@@ -266,7 +266,7 @@ The progressbar can be customized by using the following build-in placeholders. 
 - `{percentage}` - the current progress in percent (0-100)
 - `{total}` - the end value
 - `{value}` - the current value set by last `update()` call
-- `{eta}` - expected time of accomplishment in seconds (limmited to 115days, otherwise INF is displayed)
+- `{eta}` - expected time of accomplishment (limmited to 115days, otherwise INF is displayed)
 - `{duration}` - elapsed time in seconds
 - `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
 - `{duration_formatted}` - elapsed time formatted into appropriate units
@@ -275,7 +275,7 @@ The progressbar can be customized by using the following build-in placeholders. 
 
 ```js
 const opt = {
-    format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}'
+    format: 'progress [{bar}] {percentage}% | ETA: {eta} | {value}/{total}'
 }
 ```
 
@@ -368,7 +368,7 @@ The payload object keys should only contain keys matching standard `\w+` regex!
 ```js
 // create new progress bar with custom token "speed"
 const bar = new _progress.Bar({
-    format: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit'
+    format: 'progress [{bar}] {percentage}% | ETA: {eta} | {value}/{total} | Speed: {speed} kbit'
 });
 
 // initialize the bar - set payload token "speed" with the default value "N/A"
@@ -396,7 +396,7 @@ bar.stop();
 const _colors = require('colors');
 
 module.exports = {
-    format: _colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
+    format: _colors.red(' {bar}') + ' {percentage}% | ETA: {eta} | {value}/{total} | Speed: {speed} kbit',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591'
 };

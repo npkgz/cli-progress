@@ -3,7 +3,7 @@ const _progress = require('../cli-progress');
 // create a new progress bar with preset
 const bar = new _progress.Bar({
     // green bar, reset styles after bar element
-    format: ' >> [\u001b[32m{bar}\u001b[0m] {percentage}% | ETA: {eta}s | {value}/{total}',
+    format: ' >> [\u001b[32m{bar}\u001b[0m] {percentage}% | ETA: {eta} | {value}/{total}',
 
     // same chars for bar elements, just separated by colors
     barCompleteChar: '#',
