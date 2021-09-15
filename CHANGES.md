@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.9.1 ###
+
+* Bugfix: duration calculation doesn't work for bar restart scenarios - thanks to [autlaw on GitHub](https://github.com/npkgz/cli-progress/pull/101)
+
 ### 3.9.0 ###
 
 * Added: exported standard formatter and format helper
