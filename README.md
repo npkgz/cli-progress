@@ -65,10 +65,11 @@ Single Bar Mode
 
 ```js
 const cliProgress = require('cli-progress');
+const colors = require('colors');
 
 // create new progress bar
 const b1 = new cliProgress.SingleBar({
-    format: 'CLI Progress |' + _colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks || Speed: {speed}',
+    format: 'CLI Progress |' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks || Speed: {speed}',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
@@ -302,9 +303,9 @@ function formatter(options, params, payload){
     // end value reached ?
     // change color to green when finished
     if (params.value >= params.total){
-        return '# ' + _colors.grey(payload.task) + '   ' + _colors.green(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
+        return '# ' + colors.grey(payload.task) + '   ' + colors.green(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
     }else{
-        return '# ' + payload.task + '   ' + _colors.yellow(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
+        return '# ' + payload.task + '   ' + colors.yellow(params.value + '/' + params.total) + ' --[' + bar + ']-- ';
     }
 }
 
@@ -393,10 +394,10 @@ bar.stop();
 **File** `myPreset.js`
 
 ```js
-const _colors = require('colors');
+const colors = require('colors');
 
 module.exports = {
-    format: _colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
+    format: colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591'
 };
