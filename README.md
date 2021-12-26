@@ -22,7 +22,7 @@ Features
 --------
 
 * **Simple**, **Robust** and **Easy** to use
-* Full customizable output format (constious placeholders are available)
+* Full customizable output format (various placeholders are available)
 * Single progressbar mode
 * Multi progessbar mode
 * Custom Bar Characters
