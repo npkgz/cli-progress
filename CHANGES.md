@@ -1,5 +1,11 @@
 ## Branch 3.x ##
 
+### 3.10.0 ###
+
+* Changed: foreground color of `preset.shades-grey` is set directly by ANSI codes
+* Changed: example snippets are using `ansi-colors` library
+* Bugfix: removed `colors` dependency due to some issues with the maintainer... see [Zalgo bomb](https://github.com/Marak/colors.js/issues/285#issuecomment-1008212640)
+
 ### 3.9.1 ###
 
 * Bugfix: duration calculation doesn't work for bar restart scenarios - thanks to [autlaw on GitHub](https://github.com/npkgz/cli-progress/pull/101)

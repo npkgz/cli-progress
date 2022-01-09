@@ -1,5 +1,5 @@
 const _progress = require('../cli-progress');
-const _colors = require('colors');
+const _colors = require('ansi-colors');
 
 function myFormatter(options, params, payload){
 

@@ -1,12 +1,12 @@
-var _progress = require('../cli-progress');
-var _colors = require('colors');
+const _progress = require('../cli-progress');
+const _colors = require('ansi-colors');
 
 // helper function to display preset
 function showPreset(name){
     console.log(_colors.magenta('Preset: ' + name));
 
     // create a new progress bar with preset
-    var bar = new _progress.Bar({}, _progress.Presets[name] || _progress.Presets.legacy);
+    const bar = new _progress.Bar({}, _progress.Presets[name] || _progress.Presets.legacy);
     bar.start(200, 0);
 
     // random value 1..200

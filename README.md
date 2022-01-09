@@ -65,7 +65,9 @@ Single Bar Mode
 
 ```js
 const cliProgress = require('cli-progress');
-const colors = require('colors');
+
+// note: you have to install this dependency manually since it's not required by cli-progress
+const colors = require('ansi-colors');
 
 // create new progress bar
 const b1 = new cliProgress.SingleBar({
@@ -394,7 +396,7 @@ bar.stop();
 **File** `myPreset.js`
 
 ```js
-const colors = require('colors');
+const colors = require('ansi-colors');
 
 module.exports = {
     format: colors.red(' {bar}') + ' {percentage}% | ETA: {eta}s | {value}/{total} | Speed: {speed} kbit',
