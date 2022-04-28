@@ -201,10 +201,11 @@ const <instance> = new cliProgress.MultiBar(options:object [, preset:object]);
 
 ### ::create() ###
 
-Adds a new progress bar to the container and starts the bar. Returns regular `SingleBar` object which can be individually controlled.
+Adds a new progress bar to the container and starts the bar. Returns regular `SingleBar` object which can be individually controlled. The options specified here override
+those inherited from the container just for this bar.
 
 ```js
-const <barInstance> = <instance>.create(totalValue:int, startValue:int [, payload:object = {}]);
+const <barInstance> = <instance>.create(totalValue:int, startValue:int [, payload:object = {} [, options:object = {}]]);
 ```
 
 ### ::remove() ###
