@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.11.0 ###
+
+* Added: `gracefulExit` option (enabled by default) to stop the bars in case of `SIGINT` or `SIGTERM` - this restores most cursor settings before exiting
+
 ### 3.10.0 ###
 
 * Changed: foreground color of `preset.shades-grey` is set directly by ANSI codes

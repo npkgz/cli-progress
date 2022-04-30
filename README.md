@@ -239,6 +239,7 @@ The following options can be changed
 - `barIncompleteChar` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
+- `gracefulExit` (type:boolean) - stop the bars in case of `SIGINT` or `SIGTERM` - this restores most cursor settings before exiting (default: `true`)
 - `etaBuffer` (type:int) - number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10)
 - `etaAsynchronousUpdate` (type:boolean) - trigger an eta calculation update during asynchronous rendering trigger using the current value - should only be used for long running processes in conjunction with lof `fps` values and large `etaBuffer` (default: false)
 - `synchronousUpdate` (type:boolean) - trigger redraw during `update()` in case threshold time x2 is exceeded (default: true) - limited to single bar usage

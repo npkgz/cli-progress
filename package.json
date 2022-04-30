@@ -1,6 +1,6 @@
 {
     "name": "cli-progress",
-    "version": "3.10.0",
+    "version": "3.11.0",
     "description": "easy to use progress-bar for command-line/terminal applications",
     "keywords": [
         "cli",
@@ -35,11 +35,11 @@
     "author": "Andi Dittrich (https://andidittrich.com)",
     "license": "MIT",
     "dependencies": {
-        "string-width": "^4.2.0"
+        "string-width": "^4.2.3"
     },
     "devDependencies": {
-        "eslint": "^6.4.0",
+        "eslint": "^8.14.0",
         "eslint-config-aenondynamics": "^0.2.0",
-        "mocha": "^7.1.1"
+        "mocha": "^9.2.2"
     }
 }
