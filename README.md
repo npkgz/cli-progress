@@ -34,6 +34,7 @@ Features
 * Works in Asynchronous and Synchronous tasks
 * Preset/Theme support
 * Custom bar formatters (via callback)
+* Logging during multibar operation
 
 Usage
 ------------
@@ -221,6 +222,18 @@ Stops the all progress bars
 
 ```js
 <instance>.stop();
+```
+
+### ::log() ###
+
+Outputs (buffered) content on top of the multibars during operation. 
+
+**Notice: newline at the end is required**
+
+Example: [example-logging.js](examples/example-logging.js)
+
+```js
+<instance>.log("Hello World\n");
 ```
 
 Options
