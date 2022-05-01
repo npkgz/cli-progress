@@ -4,6 +4,7 @@
 
 * Added: `log()` convenience method the multibar to enable custom logging output on top of the progress bars during operation
 * Added: `gracefulExit` option (enabled by default) to stop the bars in case of `SIGINT` or `SIGTERM` - this restores most cursor settings before exiting
+* Added: `progressCalculationRelative` option (disabled by default) to use the `startValue` as offset for the progress calculation and calculate the absolute progress from the difference given by `total-startValue` #121
 * Bugfix: within a non-tty environment (e.g. CI/CD taskrunners) `multibar.create()` returns an undefined value in case `noTTYOutput` is not enabled #117
 
 ### 3.10.0 ###
