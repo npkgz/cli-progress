@@ -4,9 +4,9 @@ const files = {
     'eta.js        ': 187,
     'generic-bar.js': 589,
     'multi-bar.js  ': 5342,
-    'options.js    ': 42,
+    'options.txt   ': 42,
     'single-bar.js ': 2123,
-    'terminal.js   ': 4123
+    'terminal.txt  ': 4123
 };
 const bars = [];
 
@@ -27,7 +27,15 @@ console.log("Downloading files..\n");
 for (const filename in files){
     const size = files[filename];
 
-    bars.push(multibar.create(size, 0, {file: filename}));
+    // txt file ?
+    if (filename.match(/\.txt\s*$/g) !== null){
+        // override the format option
+        bars.push(multibar.create(size, 0, {file: filename}, {
+            format: ' {bar} | "{file}" | {value}/{total} | textfile'
+        }));
+    }else{
+        bars.push(multibar.create(size, 0, {file: filename}));
+    }
 }
 
 const timer = setInterval(function(){
