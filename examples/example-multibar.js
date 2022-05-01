@@ -17,7 +17,8 @@ const multibar = new _progress.MultiBar({
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     clearOnComplete: true,
-    stopOnComplete: true
+    stopOnComplete: true,
+    noTTYOutput: true
 });
 
 console.log("Downloading files..\n");
