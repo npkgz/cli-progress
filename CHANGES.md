@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.11.1 ###
+
+* Bugfix: `MaxListenersExceededWarning` was triggered by `gracefulExit` handlers added in `v3.11.0` - thanks to [TychoTheTaco on GitHub](https://github.com/npkgz/cli-progress/pull/125)
+
 ### 3.11.0 ###
 
 * Added: `log()` convenience method the multibar to enable custom logging output on top of the progress bars during operation
