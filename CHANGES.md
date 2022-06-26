@@ -1,5 +1,9 @@
 ## Branch 3.x ##
 
+### 3.11.2 ###
+
+* Bugfix: disabled `gracefulExit` by default, because the default SIGINT/SIGTERM handlers of nodejs are removed
+
 ### 3.11.1 ###
 
 * Bugfix: `MaxListenersExceededWarning` was triggered by `gracefulExit` handlers added in `v3.11.0` - thanks to [TychoTheTaco on GitHub](https://github.com/npkgz/cli-progress/pull/125)
