@@ -174,8 +174,8 @@ const cliProgress = require('cli-progress');
 // create new container
 const multibar = new cliProgress.MultiBar({
     clearOnComplete: false,
-    hideCursor: true
-
+    hideCursor: true,
+    format: ' {bar} | {filename} | {value}/{total}',
 }, cliProgress.Presets.shades_grey);
 
 // add bars
@@ -184,7 +184,8 @@ const b2 = multibar.create(1000, 0);
 
 // control bars
 b1.increment();
-b2.update(20, {filename: "helloworld.txt"});
+b2.update(20, {filename: "test1.txt"});
+b1.update(20, {filename: "helloworld.txt"});
 
 // stop all bars
 multibar.stop();
@@ -290,6 +291,7 @@ The progressbar can be customized by using the following build-in placeholders. 
 - `{duration}` - elapsed time in seconds
 - `{eta_formatted}` - expected time of accomplishment formatted into appropriate units
 - `{duration_formatted}` - elapsed time formatted into appropriate units
+- `{<payloadKeyName>}` - the payload value identified by its key
 
 ### Example ###
 
