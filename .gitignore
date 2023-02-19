@@ -9,3 +9,5 @@ node_modules*
 intern_*
 dev.js
 yarn-error.log
+.yarn
+.pnp.*

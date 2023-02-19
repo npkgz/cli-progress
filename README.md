@@ -205,7 +205,7 @@ const <instance> = new cliProgress.MultiBar(options:object [, preset:object]);
 
 Adds a new progress bar to the container and starts the bar. Returns regular `SingleBar` object which can be individually controlled.
 
-Additional `barOptions` can be passed directly to the [generic-bar](lib/generic-bar.js) to override the global options for a single bar instance. This can be useful to change the appearance of a single bar object. But be patient: this should only be used to override formats - DON'T try to set other global options like the terminal, synchronous flags, etc..
+Additional `barOptions` can be passed directly to the [generic-bar](lib/generic-bar.js) to override the global options for a single bar instance. This can be useful to change the appearance of a single bar object. But be patient: this should only be used to override format\barChars  - DON'T try to set other global options like the terminal, synchronous flags, etc..
 
 ```js
 const <barInstance> = <instance>.create(totalValue:int, startValue:int [, payload:object = {} [, barOptions:object = {}]]);
