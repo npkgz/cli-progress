@@ -1,5 +1,10 @@
 ## Branch 3.x ##
 
+### 3.12.0 ###
+
+* Added: option to override bar characters via instance options on `multibar.create()`  - thanks to [ Araxeus on GitHub](https://github.com/npkgz/cli-progress/pull/136)
+* Added: example howto use multibars with different bar styles
+
 ### 3.11.2 ###
 
 * Bugfix: disabled `gracefulExit` by default, because the default SIGINT/SIGTERM handlers of nodejs are removed
