@@ -2,8 +2,9 @@
 
 ### 3.12.0 ###
 
-* Added: option to override bar characters via instance options on `multibar.create()`  - thanks to [ Araxeus on GitHub](https://github.com/npkgz/cli-progress/pull/136)
+* Added: option to override bar characters via instance options on `multibar.create()` - thanks to [Araxeus on GitHub](https://github.com/npkgz/cli-progress/pull/136)
 * Added: example howto use multibars with different bar styles
+* Bugfix: global terminal instance was not used for multibar elements which forces hard string trimming to terminal width - caused by default `linewrap=true` state of the terminal - thanks to [emmercm on GitHub](https://github.com/npkgz/cli-progress/issues/135)
 
 ### 3.11.2 ###
 
