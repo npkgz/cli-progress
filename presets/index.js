@@ -1,11 +1,13 @@
-const _legacy = require('./legacy');
-const _shades_classic = require('./shades-classic');
-const _shades_grey = require('./shades-grey');
-const _rect = require('./rect');
+const legacy = require('./legacy.js');
+const shades_classic = require('./shades-classic.js');
+const shades_grey = require('./shades-grey.js');
+const rect = require('./rect.js');
+const braille_patterns = require('./braille-patterns.js');
 
 module.exports = {
-    legacy: _legacy,
-    shades_classic: _shades_classic,
-    shades_grey: _shades_grey,
-    rect: _rect
+    legacy,
+    shades_classic,
+    shades_grey,
+    rect,
+    braille_patterns,
 };

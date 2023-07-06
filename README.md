@@ -250,9 +250,9 @@ The following options can be changed
 - `stopOnComplete` (type:boolean) - automatically call `stop()` when the value reaches the total (default: false)
 - `clearOnComplete` (type:boolean) - clear the progress bar on complete / `stop()` call (default: false)
 - `barsize` (type:int) - the length of the progress bar in chars (default: 40)
-- `align` (type:char) - position of the progress bar - 'left' (default), 'right' or 'center'
-- `barCompleteChar` (type:char) - character to use as "complete" indicator in the bar (default: "=")
-- `barIncompleteChar` (type:char) - character to use as "incomplete" indicator in the bar (default: "-")
+- `align` (type:string) - position of the progress bar - 'left' (default), 'right' or 'center'
+- `barCompleteChar` (type:string|string[]) - character to use as "complete" indicator in the bar (default: "=")
+- `barIncompleteChar` (type:string) - character to use as "incomplete" indicator in the bar (default: "-")
 - `hideCursor` (type:boolean) - hide the cursor during progress operation; restored on complete (default: false) - pass `null` to keep terminal settings
 - `linewrap` (type:boolean) - disable line wrapping (default: false) - pass `null` to keep terminal settings; pass `true` to add linebreaks automatically (not recommended)
 - `gracefulExit` (type:boolean) - stop the bars in case of `SIGINT` or `SIGTERM` - this restores most cursor settings before exiting (default: `false` - subjected to change)
@@ -450,7 +450,7 @@ The following presets are included by default
 * **shades-classic** - Unicode background shades are used for the bar
 * **shades-grey** - Unicode background shades with grey bar
 * **rect** - Unicode Rectangles
-
+* **braille-patterns** - Unicode Braille Pattern Dots
 
 Compatibility
 ---------------------------------------------
