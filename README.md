@@ -35,6 +35,7 @@ Features
 * Preset/Theme support
 * Custom bar formatters (via callback)
 * Logging during multibar operation
+* Concurrent updatable progress information below progressbar
 
 Usage
 ------------
@@ -160,6 +161,28 @@ Note: you may want to increase `etaBuffer` size - otherwise it can cause `INF` e
 <instance>.updateETA();
 ```
 
+### ::setConcurrentInfo()
+
+Sets the text that is written below the progress bar that can be updated while the process is continuing.
+
+For example, the text could track which file is currently being downloaded during a multi-file synchronous download process.
+
+```js
+const currentFile = filenames[i];
+<instance>.setConcurrentInfo(`   --> Downloading ${currentFile}...`);
+```
+
+Concurrent Info example:
+
+![](assets/concurrent-info.png)
+
+### ::clearCurrentInfo()
+
+Clears any concurrent text written below the progress bar.
+
+```js
+<instance>.clearConcurrentInfo();
+```
 
 Multi Bar Mode
 -----------------------------------

@@ -9,3 +9,4 @@ node_modules*
 intern_*
 dev.js
 yarn-error.log
+.DS_Store
