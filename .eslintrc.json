@@ -1,3 +1,6 @@
 {
-    "extends": ["eslint:recommended", "aenondynamics"]
+    "extends": ["eslint:recommended", "aenondynamics"],
+    "parserOptions": {
+        "ecmaVersion": 13
+    }
 }
